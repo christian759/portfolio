@@ -4,8 +4,6 @@ import ProjectCard from './components/ProjectCard';
 import './App.css';
 
 function App() {
-  const [scrollPct, setScrollPct] = useState(0);
-
   useEffect(() => {
     const handleScroll = () => {
       const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -33,27 +31,27 @@ function App() {
 
   const projects = [
     {
-      title: "QueryIQ",
-      description: "Advanced RAG application integrated with Gemini API for intelligent data retrieval and contextual generation.",
-      tags: ["AI", "RAG", "Python"],
+      title: "QueryIQ | Advanced RAG Intelligence",
+      description: "A state-of-the-art Retrieval-Augmented Generation (RAG) system designed to bridge the gap between static data and dynamic AI responses. Built with Python and integrated with the Gemini API, QueryIQ processes massive datasets to provide context-aware, hyper-accurate answers. It features an advanced semantic search engine, sophisticated prompt engineering architectures, and a custom data-chunking pipeline that ensures maximum retrieval relevance while minimizing token overhead.",
+      tags: ["AI", "RAG", "Python", "Gemini API", "Semantic Search"],
       link: "https://github.com/christian759/QueryIQ"
     },
     {
-      title: "Statify",
-      description: "High-performance analytics dashboard featuring virtualized tables and real-time data visualization.",
-      tags: ["Frontend", "TypeScript", "Performance"],
+      title: "Statify | High-Performance Analytics",
+      description: "An enterprise-grade financial analytics dashboard engineered for extreme data density and performance. Leveraging React and TypeScript, Statify handles thousands of concurrent transactions with zero lag through custom virtualization logic and memoized computation layers. The system features interactive D3-powered visualizations, a robust global state management architecture, and a modular filter engine that allows users to slice through complex data with sub-second latency.",
+      tags: ["Frontend", "TypeScript", "Performance", "Data Viz", "React"],
       link: "https://github.com/christian759/statify"
     },
     {
-      title: "SmartLens",
-      description: "AI mobile application for real-time text detection using Google ML KIT on Android.",
-      tags: ["Mobile", "AI", "Kotlin"],
+      title: "SmartLens | AI-Powered Vision",
+      description: "A cutting-edge Android application that brings real-time machine learning to the edge. Developed in Kotlin, SmartLens utilizes the Google ML Kit to perform high-speed Optical Character Recognition (OCR) and object detection directly on-device. The project overcomes mobile hardware constraints through efficient thread management and custom camera processing pipelines, delivering a fluid user experience that identifies and extracts data from the physical world in milliseconds.",
+      tags: ["Mobile", "AI", "Kotlin", "ML Kit", "Computer Vision"],
       link: "https://github.com/christian759/SmartLens"
     },
     {
-      title: "DocuFlow",
-      description: "Clean architecture design system focused on documentation flows and premium user experience.",
-      tags: ["Frontend", "CSS", "UI/UX"],
+      title: "DocuFlow | Premium Design System",
+      description: "A comprehensive design system and documentation framework built with a 'design-first' philosophy. DocuFlow provides a suite of high-fidelity, accessible UI components specifically optimized for technical workflows. It features a custom CSS architecture that prioritizes modularity and developer experience (DX), alongside deep glassmorphism themes and advanced layout engines that ensure document flows remain consistent and visually stunning across all platforms.",
+      tags: ["Frontend", "CSS", "UI/UX", "Design Systems", "Architecture"],
       link: "https://github.com/christian759/docuflow"
     }
   ];
@@ -113,8 +111,8 @@ function App() {
               </div>
               <span className="glass" style={{ padding: '8px 20px', fontSize: '14px', borderRadius: '100px', background: 'rgba(255,255,255,0.05)' }}>Jan 2024 — Present</span>
             </div>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', marginBottom: '32px', maxWidth: '800px' }}>
-              Spearheading the core development of the Campulse ecosystem. My role involves architecting scalable frontend components and integrating advanced AI features to enhance student engagement and administrative efficiency. I focus on bridging the gap between complex backend logic and premium, fluid user interfaces.
+            <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', marginBottom: '32px', maxWidth: '800px', lineHeight: '1.6' }}>
+              As a core Full Stack Developer at Campulse, I lead the end-to-end engineering of critical platform features that serve thousands of users. My work involves architecting high-availability frontend systems using React and TypeScript, while simultaneously building robust backend services that power real-time interactions. I've pioneered the integration of AI-driven automation tools across the ecosystem, significantly improving user engagement through intelligent data processing and predictive analytics. I am responsible for maintaining a world-class design standard, ensuring every pixel contributes to a premium and intuitive digital experience.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
               {["React", "TypeScript", "Node.js", "AI Integration", "Performance Arch"].map(tag => (
