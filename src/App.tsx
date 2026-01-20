@@ -203,24 +203,33 @@ function App() {
           {/* Professional Section */}
           <div>
             <h3 style={{ fontSize: '2rem', marginBottom: '40px', color: 'var(--accent-primary)', borderLeft: '4px solid var(--accent-primary)', paddingLeft: '20px' }}>Professional Certifications</h3>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '40px' }}>
-              <div className="glass" style={{ padding: '32px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))', gap: '32px' }}>
+              <div className="glass" style={{ padding: '24px' }}>
                 <img
                   src="/oracle-cert.png"
                   alt="Oracle Cloud Infrastructure 2025 Certified Developer Professional"
-                  style={{ width: '100%', borderRadius: '12px', marginBottom: '24px', border: '1px solid var(--border-color)' }}
+                  style={{ width: '100%', borderRadius: '12px', marginBottom: '20px', border: '1px solid var(--border-color)' }}
                 />
-                <h4 style={{ fontSize: '20px', marginBottom: '8px' }}>Oracle Cloud Infrastructure 2025</h4>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '14px' }}>Certified Developer Professional | Oracle University</p>
+                <h4 style={{ fontSize: '18px', marginBottom: '4px' }}>OCI 2025 Developer Professional</h4>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '13px' }}>Oracle University</p>
               </div>
-              <div className="glass" style={{ padding: '32px' }}>
+              <div className="glass" style={{ padding: '24px' }}>
+                <img
+                  src="/oracle-foundation-cert.png"
+                  alt="Oracle Cloud Infrastructure 2025 Certified Foundations Associate"
+                  style={{ width: '100%', borderRadius: '12px', marginBottom: '20px', border: '1px solid var(--border-color)' }}
+                />
+                <h4 style={{ fontSize: '18px', marginBottom: '4px' }}>OCI 2025 Foundations Associate</h4>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '13px' }}>Oracle University</p>
+              </div>
+              <div className="glass" style={{ padding: '24px' }}>
                 <img
                   src="/neo4j-cert.png"
                   alt="Neo4j Graph Data Science Certified"
-                  style={{ width: '100%', borderRadius: '12px', marginBottom: '24px', border: '1px solid var(--border-color)' }}
+                  style={{ width: '100%', borderRadius: '12px', marginBottom: '20px', border: '1px solid var(--border-color)' }}
                 />
-                <h4 style={{ fontSize: '20px', marginBottom: '8px' }}>Neo4j Graph Data Science</h4>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '14px' }}>Certified Graph Data Scientist | Neo4j Inc.</p>
+                <h4 style={{ fontSize: '18px', marginBottom: '4px' }}>Neo4j Graph Data Science</h4>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '13px' }}>Neo4j Inc.</p>
               </div>
             </div>
           </div>
