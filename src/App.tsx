@@ -35,10 +35,11 @@ function App() {
     },
     {
       title: "QueryIQ | Advanced RAG Intelligence",
-      description: "A state-of-the-art Retrieval-Augmented Generation (RAG) system designed to bridge the gap between static data and dynamic AI responses. Built with Python and integrated with the Gemini API.",
+      description: "A state-of-the-art Retrieval-Augmented Generation (RAG) system with integrated Gemini AI. Features precise document analysis with full citation support and real-time intelligent responses.",
       tags: ["AI", "RAG", "Python", "Gemini API"],
       link: "https://github.com/christian759/QueryIQ",
-      demoLink: "https://query-iq.streamlit.app/"
+      demoLink: "https://query-iq.streamlit.app/",
+      image: "/query-iq.png"
     },
     {
       title: "Statify | Analytics Dashboard",
