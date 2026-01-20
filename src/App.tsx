@@ -83,8 +83,8 @@ function App() {
           <li><a href="#home" style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'inherit', textDecoration: 'none' }}>Home</a></li>
           <li><a href="#experience" style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'inherit', textDecoration: 'none' }}>Career</a></li>
           <li><a href="#projects" style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'inherit', textDecoration: 'none' }}>Projects</a></li>
-          <li><a href="#skills" style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'inherit', textDecoration: 'none' }}>Stack</a></li>
-          <li><a href="#certifications" style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'inherit', textDecoration: 'none' }}>Awards</a></li>
+          <li><a href="#skills" style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'inherit', textDecoration: 'none' }}>Expertise</a></li>
+          <li><a href="#certifications" style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'inherit', textDecoration: 'none' }}>Certifications</a></li>
         </ul>
       </nav>
 
@@ -230,11 +230,53 @@ function App() {
         </div>
       </Section>
 
-      {/* Skills Section - Experimental Layout */}
+      {/* Skills & Expertise Section */}
       <Section id="skills">
         <div className="reveal">
-          <span className="subheading">The Arsenal</span>
-          <h2 style={{ fontSize: 'clamp(3rem, 8vw, 5rem)', marginBottom: '100px' }}>Technical <span className="gradient-text">Capacities</span></h2>
+          <span className="subheading">Domain Mastery</span>
+          <h2 style={{ fontSize: 'clamp(3rem, 8vw, 5rem)', marginBottom: '80px' }}>Areas of <span className="gradient-text">Expertise</span></h2>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '32px', marginBottom: '120px' }}>
+          {[
+            {
+              title: "Generative AI & RAG",
+              desc: "Architecting intelligent systems that leverage Large Language Models with precise retrieval mechanisms. Expert in LangChain, vector embeddings, and citation-accurate AI responses.",
+              tags: ["LLMs", "LangChain", "Vector DBs", "Prompt Eng"]
+            },
+            {
+              title: "Cloud Architecture",
+              desc: "Designing resilient, scalable cloud-native applications on OCI. Specialized in serverless computing, automated DevOps pipelines, and high-availability systems.",
+              tags: ["OCI Cloud", "Docker", "DevOps", "Microservices"]
+            },
+            {
+              title: "Full Stack Engineering",
+              desc: "Building high-performance web and mobile platforms with a focus on type-safety, performance optimization, and premium user experiences.",
+              tags: ["React", "TypeScript", "Node.js", "App Design"]
+            },
+            {
+              title: "Graph Data Science",
+              desc: "Analyzing complex relationship-based data using Neo4j. Implementing graph algorithms and high-speed predictive modeling for interconnected datasets.",
+              tags: ["Neo4j", "Cypher", "GDS", "Network Analysis"]
+            }
+          ].map((exp, i) => (
+            <div key={i} className="glass reveal" style={{ padding: '48px', transitionDelay: `${i * 0.1}s` }}>
+              <h3 style={{ fontSize: '24px', marginBottom: '20px', color: 'white' }}>{exp.title}</h3>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: 1.6, marginBottom: '32px' }}>
+                {exp.desc}
+              </p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                {exp.tags.map(tag => (
+                  <span key={tag} style={{ fontSize: '10px', fontWeight: 700, padding: '6px 14px', borderRadius: '100px', background: 'rgba(255,255,255,0.05)', color: 'white', letterSpacing: '0.05em' }}>{tag}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="reveal">
+          <span className="subheading">The Toolbelt</span>
+          <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', marginBottom: '60px' }}>Technical <span className="gradient-text">Stack</span></h2>
         </div>
 
         <div className="reveal" style={{ position: 'relative' }}>
@@ -251,16 +293,12 @@ function App() {
             <span style={{ fontSize: 'clamp(1.5rem, 5vw, 4rem)', fontWeight: 400, color: 'var(--text-secondary)' }}>TypeScript</span>
             <span style={{ fontSize: 'clamp(2rem, 6vw, 5rem)', fontWeight: 700, color: 'white', border: '1px solid rgba(255,255,255,0.2)', padding: '0 30px', borderRadius: '100px' }}>Neo4j</span>
             <span style={{ fontSize: 'clamp(1.5rem, 4vw, 3rem)', fontWeight: 300, fontStyle: 'italic', color: 'var(--text-secondary)' }}>Node.js</span>
-            <span style={{ fontSize: 'clamp(2rem, 7vw, 5.5rem)', fontWeight: 800, color: 'white' }}>Generative AI</span>
             <span style={{ fontSize: 'clamp(1.2rem, 3vw, 2.5rem)', fontWeight: 600, color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.2em' }}>Python</span>
-            <span style={{ fontSize: 'clamp(1.8rem, 5vw, 4.5rem)', fontWeight: 400, color: 'white' }}>Cloud Engineering</span>
-            <span style={{ fontSize: 'clamp(2.5rem, 9vw, 7rem)', fontWeight: 800, color: 'white', textDecoration: 'underline', textUnderlineOffset: '14px' }}>System Architecture</span>
-            <span style={{ fontSize: 'clamp(1.2rem, 3vw, 2.5rem)', fontWeight: 500, color: 'var(--text-secondary)' }}>Go</span>
+            <span style={{ fontSize: 'clamp(2.5rem, 9vw, 7rem)', fontWeight: 800, color: 'white', textDecoration: 'underline', textUnderlineOffset: '14px' }}>Go</span>
             <span style={{ fontSize: 'clamp(1.8rem, 5vw, 4rem)', fontWeight: 600, color: 'white' }}>Three.js</span>
-            <span style={{ fontSize: 'clamp(1.5rem, 4vw, 3.5rem)', fontWeight: 700, color: 'var(--text-secondary)' }}>RAG Architectures</span>
             <span style={{ fontSize: 'clamp(1.5rem, 4vw, 3rem)', fontWeight: 400, color: 'var(--text-secondary)' }}>PostgreSQL</span>
-            <span style={{ fontSize: 'clamp(2rem, 6vw, 5rem)', fontWeight: 800, color: 'white' }}>OCI Cloud</span>
             <span style={{ fontSize: 'clamp(1.2rem, 3vw, 2.5rem)', fontWeight: 300, color: 'var(--text-secondary)' }}>LangChain</span>
+            <span style={{ fontSize: 'clamp(1.5rem, 4vw, 3.5rem)', fontWeight: 700, color: 'white' }}>Oracle Cloud</span>
           </div>
 
           <div className="glass" style={{
