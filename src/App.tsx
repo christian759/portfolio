@@ -66,6 +66,13 @@ function App() {
       description: "A comprehensive design system and documentation framework built with a 'design-first' philosophy. DocuFlow provides a suite of high-fidelity, accessible UI components specifically optimized for technical workflows. It features a custom CSS architecture that prioritizes modularity and developer experience (DX), alongside deep glassmorphism themes and advanced layout engines that ensure document flows remain consistent and visually stunning across all platforms.",
       tags: ["Frontend", "CSS", "UI/UX", "Design Systems", "Architecture"],
       link: "https://github.com/christian759/docuflow"
+    },
+    {
+      title: "Chronosphere | 3D Interactive World",
+      description: "A visually stunning 3D globe visualization project that maps worldwide connections and data points in real-time. Built with Three.js and React, Chronosphere features high-performance 3D rendering, interactive markers, and a seamless global animation system. The project demonstrates advanced knowledge of 3D mathematics, texture mapping, and performant animation loops within a modern web ecosystem.",
+      tags: ["3D", "Three.js", "React", "Data Viz", "Animation"],
+      link: "https://github.com/christian759/chronosphere",
+      image: "/chronosphere.png"
     }
   ];
 
@@ -188,21 +195,59 @@ function App() {
         </div>
       </Section>
 
-      {/* Certifications Section */}
       <Section id="certifications">
         <span className="subheading">Achievements</span>
-        <h2 style={{ fontSize: '3rem', marginBottom: '60px' }}>Professional <span className="gradient-text">Certifications</span></h2>
-        <div className="glass" style={{ padding: '40px', textAlign: 'center' }}>
-          <img
-            src="/neo4j-cert.png"
-            alt="Neo4j Graph Data Science Certified"
-            style={{ width: '100%', maxWidth: '800px', borderRadius: '16px', boxShadow: '0 20px 40px rgba(0,0,0,0.4)', border: '1px solid var(--border-color)' }}
-          />
-          <div style={{ marginTop: '32px' }}>
-            <h3 style={{ fontSize: '24px', marginBottom: '8px' }}>Neo4j Graph Data Science Certified</h3>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem' }}>
-              Recognized for expertise in graph algorithms, graph data science workflows, and implementing scalable graph-based AI solutions.
-            </p>
+        <h2 style={{ fontSize: '3.5rem', marginBottom: '80px' }}>Global <span className="gradient-text">Certifications</span></h2>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '100px' }}>
+          {/* Professional Section */}
+          <div>
+            <h3 style={{ fontSize: '2rem', marginBottom: '40px', color: 'var(--accent-primary)', borderLeft: '4px solid var(--accent-primary)', paddingLeft: '20px' }}>Professional Certifications</h3>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '40px' }}>
+              <div className="glass" style={{ padding: '32px' }}>
+                <img
+                  src="/oracle-cert.png"
+                  alt="Oracle Cloud Infrastructure 2025 Certified Developer Professional"
+                  style={{ width: '100%', borderRadius: '12px', marginBottom: '24px', border: '1px solid var(--border-color)' }}
+                />
+                <h4 style={{ fontSize: '20px', marginBottom: '8px' }}>Oracle Cloud Infrastructure 2025</h4>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '14px' }}>Certified Developer Professional | Oracle University</p>
+              </div>
+              <div className="glass" style={{ padding: '32px' }}>
+                <img
+                  src="/neo4j-cert.png"
+                  alt="Neo4j Graph Data Science Certified"
+                  style={{ width: '100%', borderRadius: '12px', marginBottom: '24px', border: '1px solid var(--border-color)' }}
+                />
+                <h4 style={{ fontSize: '20px', marginBottom: '8px' }}>Neo4j Graph Data Science</h4>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '14px' }}>Certified Graph Data Scientist | Neo4j Inc.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Completion of Courses Section */}
+          <div>
+            <h3 style={{ fontSize: '2rem', marginBottom: '40px', color: 'var(--accent-secondary)', borderLeft: '4px solid var(--accent-secondary)', paddingLeft: '20px' }}>Completion of Courses</h3>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '40px' }}>
+              <div className="glass" style={{ padding: '32px' }}>
+                <img
+                  src="/great-learning-cert.png"
+                  alt="Front End Development - HTML Course Completion"
+                  style={{ width: '100%', borderRadius: '12px', marginBottom: '24px', border: '1px solid var(--border-color)' }}
+                />
+                <h4 style={{ fontSize: '20px', marginBottom: '8px' }}>Front End Development - HTML</h4>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '14px' }}>Great Learning Academy</p>
+              </div>
+              <div className="glass" style={{ padding: '32px' }}>
+                <img
+                  src="/simplilearn-cert.png"
+                  alt="Data Science Expert with Python Django"
+                  style={{ width: '100%', borderRadius: '12px', marginBottom: '24px', border: '1px solid var(--border-color)' }}
+                />
+                <h4 style={{ fontSize: '20px', marginBottom: '8px' }}>Data Science Expert with Python Django</h4>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '14px' }}>Simplilearn SkillUp</p>
+              </div>
+            </div>
           </div>
         </div>
       </Section>
