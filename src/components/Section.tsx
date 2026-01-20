@@ -31,7 +31,7 @@ export default function Section({ id, children, className = "", noReveal = false
     }, [noReveal]);
 
     return (
-        <section id={id} ref={sectionRef} className={`section-padding ${className}`}>
+        <section id={id} ref={sectionRef} className={`section-padding ${className}`} style={{ scrollSnapAlign: 'start' }}>
             <div className="container">
                 {children}
             </div>

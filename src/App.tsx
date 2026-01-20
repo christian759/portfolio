@@ -43,9 +43,10 @@ function App() {
     },
     {
       title: "Statify | Analytics Dashboard",
-      description: "An enterprise-grade financial analytics dashboard engineered for performance. Leveraging React and TypeScript with custom virtualization logic and D3-powered visualizations.",
+      description: "An enterprise-grade financial analytics dashboard engineered for performance. Leveraging React and TypeScript with custom virtualization logic and D3-powered visualizations, Statify provides real-time insights with zero-lag interactions.",
       tags: ["Frontend", "TypeScript", "Performance", "React"],
-      link: "https://github.com/christian759/statify"
+      link: "https://github.com/christian759/statify",
+      images: ["/statify-1.png", "/statify-2.png"]
     },
     {
       title: "Object Detection | Real-time Vision",
@@ -157,9 +158,14 @@ function App() {
                 flexWrap: 'wrap'
               }}>
                 <div style={{ flex: '1', minWidth: '320px' }}>
-                  <div className="glass" style={{ borderRadius: '40px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.05)' }}>
-                    {project.image ? (
-                      <img src={project.image} alt={project.title} style={{ width: '100%', height: 'auto', display: 'block', filter: 'grayscale(1) contrast(1.1)' }} />
+                  <div className="glass" style={{ borderRadius: '40px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.05)', position: 'relative', aspectRatio: '16/10' }}>
+                    {project.images ? (
+                      <div className="image-gallery" style={{ height: '100%', position: 'relative' }}>
+                        <img src={project.images[0]} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', filter: 'grayscale(1) contrast(1.1)' }} />
+                        <img src={project.images[1]} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', filter: 'grayscale(1) contrast(1.1)', position: 'absolute', top: 0, left: 0, opacity: 0, transition: 'opacity 0.8s ease' }} className="hover-image" />
+                      </div>
+                    ) : project.image ? (
+                      <img src={project.image} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', filter: 'grayscale(1) contrast(1.1)' }} />
                     ) : (
                       <div style={{ aspectRatio: '16/9', background: 'rgba(255,255,255,0.02)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                         <span style={{ fontSize: '80px', opacity: 0.05 }}>❖</span>
@@ -238,62 +244,45 @@ function App() {
         </div>
       </Section>
 
-      {/* Certifications Section - Monochrome Grid */}
+      {/* Certifications Section - Mature Moment Layout */}
       <Section id="certifications">
         <div className="reveal">
           <span className="subheading">Proof of Expertise</span>
           <h2 style={{ fontSize: 'clamp(3rem, 8vw, 5rem)', marginBottom: '100px' }}>Global <span className="gradient-text">Credentials</span></h2>
         </div>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '140px' }}>
-          {/* Professional Section */}
-          <div>
-            <div className="reveal" style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '60px' }}>
-              <h3 style={{ fontSize: '2rem', color: 'white', borderLeft: '4px solid white', paddingLeft: '24px', margin: 0 }}>Professional Credentials</h3>
-              <div style={{ height: '1px', flex: 1, background: 'linear-gradient(90deg, white, transparent)', opacity: 0.1 }} />
-            </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(380px, 1fr))', gap: '40px' }}>
-              {[
-                { img: "/oracle-cert.png", title: "OCI 2025 Developer Professional", desc: "Expertise in cloud-native app development, OCI DevOps, and serverless architectures." },
-                { img: "/oracle-ai-cert.png", title: "OCI 2025 Generative AI Professional", desc: "Advanced LLM orchestration, RAG systems, and AI-driven cloud solutions." },
-                { img: "/oracle-ds-cert.png", title: "OCI 2025 Data Science Professional", desc: "Machine learning lifecycle mastery: exploration, training, and model deployment." },
-                { img: "/oracle-foundation-cert.png", title: "OCI 2025 Foundations Associate", desc: "Foundational cloud services, core infrastructure, and enterprise security models." },
-                { img: "/neo4j-cert.png", title: "Neo4j Graph Data Science", desc: "Certified in graph algorithms and high-performance predictive graph modeling." }
-              ].map((cert, i) => (
-                <div key={i} className="reveal" style={{ transitionDelay: `${i * 0.1}s` }}>
-                  <div className="glass card-hover" style={{ padding: '40px', display: 'flex', flexDirection: 'column', height: '100%' }}>
-                    <img src={cert.img} alt={cert.title} style={{ width: '100%', borderRadius: '16px', marginBottom: '32px', border: '1px solid var(--border-color)', filter: 'grayscale(1)' }} />
-                    <h4 style={{ fontSize: '20px', marginBottom: '12px', color: 'white' }}>{cert.title}</h4>
-                    <p style={{ color: 'var(--text-secondary)', fontSize: '13px', fontWeight: 800, marginBottom: '20px', letterSpacing: '0.05em' }}>ORACLE / NEO4J</p>
-                    <p style={{ fontSize: '15px', color: 'var(--text-secondary)', lineHeight: '1.6' }}>{cert.desc}</p>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '250px' }}>
+          {[
+            { img: "/oracle-cert.png", title: "OCI 2025 Developer Professional", provider: "ORACLE", desc: "Expertise in cloud-native app development, OCI DevOps, and serverless architectures." },
+            { img: "/oracle-ai-cert.png", title: "OCI 2025 Generative AI Professional", provider: "ORACLE", desc: "Advanced LLM orchestration, RAG systems, and AI-driven cloud solutions." },
+            { img: "/oracle-ds-cert.png", title: "OCI 2025 Data Science Professional", provider: "ORACLE", desc: "Machine learning lifecycle mastery: exploration, training, and model deployment." },
+            { img: "/neo4j-cert.png", title: "Neo4j Graph Data Science", provider: "NEO4J", desc: "Certified in graph algorithms and high-performance predictive graph modeling." },
+            { img: "/great-learning-cert.png", title: "Front End Dev - HTML", provider: "GREAT LEARNING", desc: "Fundamental mastery of semantic structure, accessibility, and modern responsive design." },
+            { img: "/simplilearn-cert.png", title: "Data Science w/ Python & Django", provider: "SIMPLILEARN", desc: "Python-driven data workflows and integration of predictive models into web ecosystems." }
+          ].map((cert, i) => (
+            <div key={i} className="reveal" style={{ transitionDelay: `${i * 0.1}s`, scrollSnapAlign: 'center' }}>
+              <div style={{
+                display: 'flex',
+                flexDirection: i % 2 !== 0 ? 'row' : 'row-reverse',
+                gap: '100px',
+                alignItems: 'center',
+                flexWrap: 'wrap'
+              }}>
+                <div style={{ flex: '1.2', minWidth: '320px' }}>
+                  <div className="glass card-hover" style={{ borderRadius: '24px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.08)' }}>
+                    <img src={cert.img} alt={cert.title} style={{ width: '100%', height: 'auto', display: 'block', filter: 'grayscale(1) brightness(0.9)' }} />
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Specializations Section */}
-          <div>
-            <div className="reveal" style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '60px' }}>
-              <h3 style={{ fontSize: '2rem', color: 'var(--text-secondary)', borderLeft: '4px solid var(--text-secondary)', paddingLeft: '24px', margin: 0 }}>Course Completion</h3>
-              <div style={{ height: '1px', flex: 1, background: 'linear-gradient(90deg, var(--text-secondary), transparent)', opacity: 0.1 }} />
-            </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(380px, 1fr))', gap: '40px' }}>
-              {[
-                { img: "/great-learning-cert.png", title: "Front End Dev - HTML", provider: "GREAT LEARNING", desc: "Fundamental mastery of semantic structure, accessibility, and modern responsive design." },
-                { img: "/simplilearn-cert.png", title: "Data Science w/ Python & Django", provider: "SIMPLILEARN", desc: "Python-driven data workflows and integration of predictive models into web ecosystems." }
-              ].map((cert, i) => (
-                <div key={i} className="reveal" style={{ transitionDelay: `${i * 0.1}s` }}>
-                  <div className="glass card-hover" style={{ padding: '40px', display: 'flex', flexDirection: 'column', height: '100%' }}>
-                    <img src={cert.img} alt={cert.title} style={{ width: '100%', borderRadius: '16px', marginBottom: '32px', border: '1px solid var(--border-color)', filter: 'grayscale(1)' }} />
-                    <h4 style={{ fontSize: '20px', marginBottom: '12px', color: 'white' }}>{cert.title}</h4>
-                    <p style={{ color: 'var(--text-secondary)', fontSize: '13px', fontWeight: 800, marginBottom: '20px', letterSpacing: '0.05em' }}>{cert.provider}</p>
-                    <p style={{ fontSize: '15px', color: 'var(--text-secondary)', lineHeight: '1.6' }}>{cert.desc}</p>
-                  </div>
+                <div style={{ flex: '1', minWidth: '320px' }}>
+                  <span style={{ fontSize: '13px', fontWeight: 800, opacity: 0.4, letterSpacing: '0.4em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>{cert.provider}</span>
+                  <h3 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.8rem)', marginBottom: '24px', lineHeight: 1.2 }}>{cert.title}</h3>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '1.15rem', lineHeight: 1.8, maxWidth: '500px' }}>
+                    {cert.desc}
+                  </p>
                 </div>
-              ))}
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </Section>
 
