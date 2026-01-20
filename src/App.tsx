@@ -202,59 +202,85 @@ function App() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '100px' }}>
           {/* Professional Section */}
           <div>
-            <h3 style={{ fontSize: '2rem', marginBottom: '40px', color: 'var(--accent-primary)', borderLeft: '4px solid var(--accent-primary)', paddingLeft: '20px' }}>Professional Certifications</h3>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))', gap: '32px' }}>
-              <div className="glass" style={{ padding: '24px' }}>
-                <img
-                  src="/oracle-cert.png"
-                  alt="Oracle Cloud Infrastructure 2025 Certified Developer Professional"
-                  style={{ width: '100%', borderRadius: '12px', marginBottom: '20px', border: '1px solid var(--border-color)' }}
-                />
-                <h4 style={{ fontSize: '18px', marginBottom: '4px' }}>OCI 2025 Developer Professional</h4>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '13px' }}>Oracle University</p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '40px' }}>
+              <h3 style={{ fontSize: '2rem', color: 'var(--accent-primary)', borderLeft: '4px solid var(--accent-primary)', paddingLeft: '20px', margin: 0 }}>Professional Certifications</h3>
+              <div style={{ height: '1px', flex: 1, background: 'linear-gradient(90deg, var(--accent-primary), transparent)', opacity: 0.3 }} />
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '32px' }}>
+              {/* OCI Developer */}
+              <div className="glass card-hover" style={{ padding: '28px', display: 'flex', flexDirection: 'column' }}>
+                <img src="/oracle-cert.png" alt="OCI Developer Professional" style={{ width: '100%', borderRadius: '12px', marginBottom: '20px', border: '1px solid var(--border-color)' }} />
+                <h4 style={{ fontSize: '18px', marginBottom: '4px', color: 'white' }}>OCI 2025 Developer Professional</h4>
+                <p style={{ color: 'var(--accent-primary)', fontSize: '13px', fontWeight: 600, marginBottom: '16px' }}>Oracle University</p>
+                <div style={{ fontSize: '14px', color: 'var(--text-secondary)', lineHeight: '1.5', flex: 1 }}>
+                  Expertise in developing and deploying cloud-native applications on OCI. Mastered OCI DevOps, serverless functions, API management, and containerized workloads.
+                </div>
               </div>
-              <div className="glass" style={{ padding: '24px' }}>
-                <img
-                  src="/oracle-foundation-cert.png"
-                  alt="Oracle Cloud Infrastructure 2025 Certified Foundations Associate"
-                  style={{ width: '100%', borderRadius: '12px', marginBottom: '20px', border: '1px solid var(--border-color)' }}
-                />
+
+              {/* OCI Gen AI */}
+              <div className="glass card-hover" style={{ padding: '28px', display: 'flex', flexDirection: 'column' }}>
+                <img src="/oracle-ai-cert.png" alt="OCI Generative AI Professional" style={{ width: '100%', borderRadius: '12px', marginBottom: '20px', border: '1px solid var(--border-color)' }} />
+                <h4 style={{ fontSize: '18px', marginBottom: '4px', color: 'white' }}>OCI 2025 Generative AI Professional</h4>
+                <p style={{ color: 'var(--accent-primary)', fontSize: '13px', fontWeight: 600, marginBottom: '16px' }}>Oracle University</p>
+                <div style={{ fontSize: '14px', color: 'var(--text-secondary)', lineHeight: '1.5', flex: 1 }}>
+                  Advanced command of Large Language Models (LLMs) and Generative AI services. Specialized in fine-tuning, retrieval-augmented generation (RAG), and building AI-driven cloud solutions.
+                </div>
+              </div>
+
+              {/* OCI Data Science */}
+              <div className="glass card-hover" style={{ padding: '28px', display: 'flex', flexDirection: 'column' }}>
+                <img src="/oracle-ds-cert.png" alt="OCI Data Science Professional" style={{ width: '100%', borderRadius: '12px', marginBottom: '20px', border: '1px solid var(--border-color)' }} />
+                <h4 style={{ fontSize: '18px', marginBottom: '4px', color: 'white' }}>OCI 2025 Data Science Professional</h4>
+                <p style={{ color: 'var(--accent-primary)', fontSize: '13px', fontWeight: 600, marginBottom: '16px' }}>Oracle University</p>
+                <div style={{ fontSize: '14px', color: 'var(--text-secondary)', lineHeight: '1.5', flex: 1 }}>
+                  Deep knowledge of the machine learning lifecycle. Proficient in data exploration, model training, deployment, and monitoring using the OCI Data Science platform.
+                </div>
+              </div>
+
+              {/* OCI Foundations */}
+              <div className="glass card-hover" style={{ padding: '28px', display: 'flex', flexDirection: 'column' }}>
+                <img src="/oracle-foundation-cert.png" alt="OCI Foundations Associate" style={{ width: '100%', borderRadius: '12px', marginBottom: '20px', border: '1px solid var(--border-color)' }} />
                 <h4 style={{ fontSize: '18px', marginBottom: '4px' }}>OCI 2025 Foundations Associate</h4>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '13px' }}>Oracle University</p>
+                <p style={{ color: 'var(--accent-primary)', fontSize: '13px', fontWeight: 600, marginBottom: '16px' }}>Oracle University</p>
+                <div style={{ fontSize: '14px', color: 'var(--text-secondary)', lineHeight: '1.5', flex: 1 }}>
+                  Comprehensive understanding of core cloud computing concepts. Expertise in OCI infrastructure services, security models, governance, and cloud architecture basics.
+                </div>
               </div>
-              <div className="glass" style={{ padding: '24px' }}>
-                <img
-                  src="/neo4j-cert.png"
-                  alt="Neo4j Graph Data Science Certified"
-                  style={{ width: '100%', borderRadius: '12px', marginBottom: '20px', border: '1px solid var(--border-color)' }}
-                />
+
+              {/* Neo4j */}
+              <div className="glass card-hover" style={{ padding: '28px', display: 'flex', flexDirection: 'column' }}>
+                <img src="/neo4j-cert.png" alt="Neo4j Graph Data Science" style={{ width: '100%', borderRadius: '12px', marginBottom: '20px', border: '1px solid var(--border-color)' }} />
                 <h4 style={{ fontSize: '18px', marginBottom: '4px' }}>Neo4j Graph Data Science</h4>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '13px' }}>Neo4j Inc.</p>
+                <p style={{ color: 'var(--accent-primary)', fontSize: '13px', fontWeight: 600, marginBottom: '16px' }}>Neo4j Inc.</p>
+                <div style={{ fontSize: '14px', color: 'var(--text-secondary)', lineHeight: '1.5', flex: 1 }}>
+                  Certified expertise in graph algorithms, graph feature engineering, and predictive modeling. Skilled in leveraging graph data to improve machine learning accuracy.
+                </div>
               </div>
             </div>
           </div>
 
           {/* Completion of Courses Section */}
           <div>
-            <h3 style={{ fontSize: '2rem', marginBottom: '40px', color: 'var(--accent-secondary)', borderLeft: '4px solid var(--accent-secondary)', paddingLeft: '20px' }}>Completion of Courses</h3>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '40px' }}>
-              <div className="glass" style={{ padding: '32px' }}>
-                <img
-                  src="/great-learning-cert.png"
-                  alt="Front End Development - HTML Course Completion"
-                  style={{ width: '100%', borderRadius: '12px', marginBottom: '24px', border: '1px solid var(--border-color)' }}
-                />
-                <h4 style={{ fontSize: '20px', marginBottom: '8px' }}>Front End Development - HTML</h4>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '14px' }}>Great Learning Academy</p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '40px' }}>
+              <h3 style={{ fontSize: '2rem', color: 'var(--accent-secondary)', borderLeft: '4px solid var(--accent-secondary)', paddingLeft: '20px', margin: 0 }}>Course Completion</h3>
+              <div style={{ height: '1px', flex: 1, background: 'linear-gradient(90deg, var(--accent-secondary), transparent)', opacity: 0.3 }} />
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '32px' }}>
+              <div className="glass card-hover" style={{ padding: '28px', display: 'flex', flexDirection: 'column' }}>
+                <img src="/great-learning-cert.png" alt="Front End Development" style={{ width: '100%', borderRadius: '12px', marginBottom: '20px', border: '1px solid var(--border-color)' }} />
+                <h4 style={{ fontSize: '18px', marginBottom: '8px', color: 'white' }}>Front End Development - HTML</h4>
+                <p style={{ color: 'var(--accent-secondary)', fontSize: '13px', fontWeight: 600, marginBottom: '16px' }}>Great Learning Academy</p>
+                <div style={{ fontSize: '14px', color: 'var(--text-secondary)', lineHeight: '1.5', flex: 1 }}>
+                  Gained fundamental mastery of semantic HTML5, web accessibility standards, and responsive document structure for modern web applications.
+                </div>
               </div>
-              <div className="glass" style={{ padding: '32px' }}>
-                <img
-                  src="/simplilearn-cert.png"
-                  alt="Data Science Expert with Python Django"
-                  style={{ width: '100%', borderRadius: '12px', marginBottom: '24px', border: '1px solid var(--border-color)' }}
-                />
-                <h4 style={{ fontSize: '20px', marginBottom: '8px' }}>Data Science Expert with Python Django</h4>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '14px' }}>Simplilearn SkillUp</p>
+              <div className="glass card-hover" style={{ padding: '28px', display: 'flex', flexDirection: 'column' }}>
+                <img src="/simplilearn-cert.png" alt="Data Science Expert" style={{ width: '100%', borderRadius: '12px', marginBottom: '20px', border: '1px solid var(--border-color)' }} />
+                <h4 style={{ fontSize: '18px', marginBottom: '8px', color: 'white' }}>Data Science with Python & Django</h4>
+                <p style={{ color: 'var(--accent-secondary)', fontSize: '13px', fontWeight: 600, marginBottom: '16px' }}>Simplilearn SkillUp</p>
+                <div style={{ fontSize: '14px', color: 'var(--text-secondary)', lineHeight: '1.5', flex: 1 }}>
+                  Explored data science workflows using Python and libraries like NumPy/Pandas, while learning to integrate analytical models into scalable Django web platforms.
+                </div>
               </div>
             </div>
           </div>
