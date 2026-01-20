@@ -1,17 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700;800&display=swap');
 
 :root {
-  --bg-color: #010101;
-  /* Deeper Black */
-  --bg-card: rgba(255, 255, 255, 0.02);
-  --border-color: rgba(255, 255, 255, 0.05);
+  --bg-color: #000000;
+  --bg-card: rgba(255, 255, 255, 0.03);
+  --border-color: rgba(255, 255, 255, 0.1);
   --text-primary: #ffffff;
-  --text-secondary: #64748b;
-  /* Muted slate */
-  --accent-primary: #818cf8;
-  /* Softer Indigo */
-  --accent-secondary: #22d3ee;
-  /* Vibrant Cyan */
+  --text-secondary: #a1a1aa;
+  --accent-primary: #ffffff;
+  --accent-secondary: #71717a;
   --font-body: 'Inter', sans-serif;
   --font-heading: 'Outfit', sans-serif;
 
@@ -30,6 +26,7 @@
 html {
   scroll-behavior: smooth;
   background-color: var(--bg-color);
+  scroll-snap-type: y mandatory;
 }
 
 body {
@@ -42,6 +39,14 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 /* 3D Immersive Lighting */
 .directional-light {
   position: fixed;
@@ -52,8 +57,8 @@ body {
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(circle at var(--light-x) var(--light-y), rgba(129, 140, 248, 0.08) 0%, transparent 70%),
-    radial-gradient(circle at calc(100% - var(--light-x)) calc(100% - var(--light-y)), rgba(34, 211, 238, 0.04) 0%, transparent 60%);
+    radial-gradient(circle at var(--light-x) var(--light-y), rgba(255, 255, 255, 0.05) 0%, transparent 70%),
+    radial-gradient(circle at calc(100% - var(--light-x)) calc(100% - var(--light-y)), rgba(255, 255, 255, 0.02) 0%, transparent 60%);
 }
 
 .mesh-grid {
@@ -125,7 +130,7 @@ h4 {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, var(--text-primary) 30%, var(--accent-primary) 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #a1a1aa 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -137,7 +142,7 @@ h4 {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border-color);
   border-radius: 100px;
-  color: var(--accent-primary);
+  color: white;
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;

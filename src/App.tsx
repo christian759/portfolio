@@ -117,20 +117,20 @@ function App() {
       {/* Experience Section */}
       <Section id="experience">
         <div className="reveal">
-          <span className="subheading">Career Milestones</span>
-          <h2 style={{ fontSize: 'clamp(3rem, 8vw, 5rem)', marginBottom: '100px', maxWidth: '800px' }}>Professional <span className="gradient-text">Impact</span> at scale.</h2>
+          <span className="subheading">Career Journey</span>
+          <h2 style={{ fontSize: 'clamp(3rem, 8vw, 5rem)', marginBottom: '100px', maxWidth: '800px' }}>Professional <span className="gradient-text">Trajectory</span> @ Campulse.</h2>
         </div>
 
         <div className="glass reveal" style={{ padding: '80px', transitionDelay: '0.1s' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '24px', marginBottom: '40px' }}>
             <div>
               <h3 style={{ fontSize: '32px', marginBottom: '8px' }}>Full Stack & Mobile Developer</h3>
-              <p style={{ color: 'var(--accent-primary)', fontWeight: 700, fontSize: '1.2rem' }}>Campulse</p>
+              <p style={{ color: 'white', fontWeight: 700, fontSize: '1.2rem' }}>Campulse</p>
             </div>
-            <span style={{ fontSize: '14px', fontWeight: 600, opacity: 0.6, letterSpacing: '0.05em' }}>JAN 2024 — PRESENT</span>
+            <span style={{ fontSize: '14px', fontWeight: 600, opacity: 0.6, letterSpacing: '0.05em' }}>JUL 2025 — PRESENT</span>
           </div>
           <p style={{ color: 'var(--text-secondary)', fontSize: '1.3rem', marginBottom: '48px', maxWidth: '900px', lineHeight: '1.8' }}>
-            As a core Engineer at Campulse, I lead the end-to-end development of critical platform features and mobile applications that serve thousands of users. My focus is on architecting high-availability systems using React, TypeScript, and robust mobile frameworks. I ensure every pixel contributes to a premium and intuitive digital experience across the entire ecosystem.
+            As a core Engineer at Campulse, I lead the end-to-end development of critical platform features and mobile applications. My focus is on architecting high-availability systems using React, TypeScript, and robust mobile frameworks. I ensure every pixel contributes to a premium and intuitive digital experience across the entire ecosystem, bridging human intuition with complex data structures.
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
             {["React", "TypeScript", "Mobile Native", "Node.js", "System Architecture"].map(tag => (
@@ -140,76 +140,117 @@ function App() {
         </div>
       </Section>
 
-      {/* Projects Section - More Spacious Grid */}
+      {/* Projects Section - Storytelling Layout */}
       <Section id="projects">
         <div className="reveal">
-          <span className="subheading">Project Gallery</span>
-          <h2 style={{ fontSize: 'clamp(3rem, 8vw, 5rem)', marginBottom: '100px' }}>Featured <span className="gradient-text">Creations</span></h2>
+          <span className="subheading">Crafted Works</span>
+          <h2 style={{ fontSize: 'clamp(3rem, 8vw, 5rem)', marginBottom: '100px' }}>Project <span className="gradient-text">Stories</span></h2>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(450px, 1fr))', gap: '60px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '200px' }}>
           {projects.map((project, index) => (
             <div key={index} className="reveal" style={{ transitionDelay: `${index * 0.1}s` }}>
-              <div className="glass card-hover" style={{ height: '100%' }}>
-                <ProjectCard {...project} />
+              <div style={{
+                display: 'flex',
+                flexDirection: index % 2 === 0 ? 'row' : 'row-reverse',
+                gap: '80px',
+                alignItems: 'center',
+                flexWrap: 'wrap'
+              }}>
+                <div style={{ flex: '1', minWidth: '320px' }}>
+                  <div className="glass" style={{ borderRadius: '40px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.05)' }}>
+                    {project.image ? (
+                      <img src={project.image} alt={project.title} style={{ width: '100%', height: 'auto', display: 'block', filter: 'grayscale(1) contrast(1.1)' }} />
+                    ) : (
+                      <div style={{ aspectRatio: '16/9', background: 'rgba(255,255,255,0.02)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <span style={{ fontSize: '80px', opacity: 0.05 }}>❖</span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+                <div style={{ flex: '1', minWidth: '320px' }}>
+                  <span style={{ fontSize: '14px', fontWeight: 800, opacity: 0.3, letterSpacing: '0.3em', textTransform: 'uppercase', display: 'block', marginBottom: '24px' }}>Project {index + 1}</span>
+                  <h3 style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', marginBottom: '32px', lineHeight: 1.1 }}>{project.title}</h3>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', lineHeight: 1.7, marginBottom: '40px' }}>
+                    {project.description}
+                  </p>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginBottom: '48px' }}>
+                    {project.tags.map(tag => (
+                      <span key={tag} style={{ fontSize: '11px', fontWeight: 700, padding: '8px 20px', borderRadius: '100px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)' }}>{tag}</span>
+                    ))}
+                  </div>
+                  <div style={{ display: 'flex', gap: '32px' }}>
+                    <a href={project.link} target="_blank" style={{ color: 'white', fontWeight: 700, textDecoration: 'none', borderBottom: '2px solid white', paddingBottom: '4px', fontSize: '14px', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Repository</a>
+                    {project.demoLink && (
+                      <a href={project.demoLink} target="_blank" style={{ color: 'white', fontWeight: 700, textDecoration: 'none', borderBottom: '2px solid rgba(255,255,255,0.3)', paddingBottom: '4px', fontSize: '14px', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Demo</a>
+                    )}
+                  </div>
+                </div>
               </div>
             </div>
           ))}
         </div>
       </Section>
 
-      {/* Skills Section - Cleaner Layout */}
+      {/* Skills Section - Experimental Layout */}
       <Section id="skills">
         <div className="reveal">
-          <span className="subheading">Technical Stack</span>
-          <h2 style={{ fontSize: 'clamp(3rem, 8vw, 5rem)', marginBottom: '100px' }}>The <span className="gradient-text">Core</span> Arsenal</h2>
+          <span className="subheading">The Arsenal</span>
+          <h2 style={{ fontSize: 'clamp(3rem, 8vw, 5rem)', marginBottom: '100px' }}>Technical <span className="gradient-text">Capacities</span></h2>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '80px' }}>
-          <div className="reveal">
-            <h3 style={{ marginBottom: '32px', color: 'var(--accent-primary)', fontSize: '24px' }}>AI & Intelligence</h3>
-            <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '20px', color: 'var(--text-secondary)', fontSize: '1.1rem' }}>
-              <li><b>RAG Architectures</b> & LLM Orchestration</li>
-              <li>Generative AI (Gemini, OpenAI API)</li>
-              <li><b>Certified Neo4j Graph Data Scientist</b></li>
-              <li>Computer Vision & ML Kit</li>
-              <li>Python, Streamlit, LangChain</li>
-            </ul>
+
+        <div className="reveal" style={{ position: 'relative' }}>
+          <div style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '30px',
+            alignItems: 'baseline',
+            justifyContent: 'center',
+            maxWidth: '1200px',
+            margin: '0 auto'
+          }}>
+            <span style={{ fontSize: 'clamp(2rem, 8vw, 6rem)', fontWeight: 800, color: 'white' }}>React</span>
+            <span style={{ fontSize: 'clamp(1.5rem, 5vw, 4rem)', fontWeight: 400, color: 'var(--text-secondary)' }}>TypeScript</span>
+            <span style={{ fontSize: 'clamp(2rem, 6vw, 5rem)', fontWeight: 700, color: 'white', border: '1px solid rgba(255,255,255,0.2)', padding: '0 30px', borderRadius: '100px' }}>Neo4j</span>
+            <span style={{ fontSize: 'clamp(1.5rem, 4vw, 3rem)', fontWeight: 300, fontStyle: 'italic', color: 'var(--text-secondary)' }}>Node.js</span>
+            <span style={{ fontSize: 'clamp(2rem, 7vw, 5.5rem)', fontWeight: 800, color: 'white' }}>Generative AI</span>
+            <span style={{ fontSize: 'clamp(1.2rem, 3vw, 2.5rem)', fontWeight: 600, color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.2em' }}>Python</span>
+            <span style={{ fontSize: 'clamp(1.8rem, 5vw, 4.5rem)', fontWeight: 400, color: 'white' }}>RAG Architectures</span>
+            <span style={{ fontSize: 'clamp(1.5rem, 4vw, 3.5rem)', fontWeight: 700, color: 'var(--text-secondary)' }}>Native Mobile</span>
+            <span style={{ fontSize: 'clamp(2.5rem, 9vw, 7rem)', fontWeight: 800, color: 'white', textDecoration: 'underline', textUnderlineOffset: '14px' }}>System Architecture</span>
+            <span style={{ fontSize: 'clamp(1.2rem, 3vw, 2.5rem)', fontWeight: 500, color: 'var(--text-secondary)' }}>Go</span>
+            <span style={{ fontSize: 'clamp(1.8rem, 5vw, 4rem)', fontWeight: 600, color: 'white' }}>Three.js</span>
+            <span style={{ fontSize: 'clamp(1.5rem, 4vw, 3rem)', fontWeight: 400, color: 'var(--text-secondary)' }}>PostgreSQL</span>
+            <span style={{ fontSize: 'clamp(2rem, 6vw, 5rem)', fontWeight: 800, color: 'white' }}>Computer Vision</span>
+            <span style={{ fontSize: 'clamp(1.2rem, 3vw, 2.5rem)', fontWeight: 300, color: 'var(--text-secondary)' }}>LangChain</span>
           </div>
-          <div className="reveal" style={{ transitionDelay: '0.1s' }}>
-            <h3 style={{ marginBottom: '32px', color: 'var(--accent-secondary)', fontSize: '24px' }}>Engineering</h3>
-            <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '20px', color: 'var(--text-secondary)', fontSize: '1.1rem' }}>
-              <li><b>Full Stack React / TypeScript</b></li>
-              <li>Native Mobile Development</li>
-              <li>Node.js, Express, Go</li>
-              <li>PostgreSQL, Neo4j, Redis</li>
-              <li>System Architecture & Security</li>
-            </ul>
-          </div>
-          <div className="reveal" style={{ transitionDelay: '0.2s' }}>
-            <h3 style={{ marginBottom: '32px', color: 'white', fontSize: '24px' }}>Visual Excellence</h3>
-            <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '20px', color: 'var(--text-secondary)', fontSize: '1.1rem' }}>
-              <li><b>Premium UI/UX Design</b> Systems</li>
-              <li>Advanced 3D (Three.js, WebGL)</li>
-              <li>Motion Design & Interactions</li>
-              <li>Frontend Performance Tuning</li>
-              <li>Scalable CSS Architectures</li>
-            </ul>
+
+          <div className="glass" style={{
+            marginTop: '100px',
+            padding: '60px',
+            textAlign: 'center',
+            background: 'linear-gradient(to bottom, rgba(255,255,255,0.02), transparent)',
+            border: '1px solid rgba(255,255,255,0.05)'
+          }}>
+            <p style={{ fontSize: '1.5rem', fontWeight: 400, color: 'var(--text-secondary)', maxWidth: '800px', margin: '0 auto', lineHeight: 1.6 }}>
+              "I don't just write code. I architect <span style={{ color: 'white', fontWeight: 700 }}>Intelligent Ecosystems</span> where data flows seamlessly between AI, Mobile, and Web."
+            </p>
           </div>
         </div>
       </Section>
 
-      {/* Certifications Section - Redesigned Grid */}
+      {/* Certifications Section - Monochrome Grid */}
       <Section id="certifications">
         <div className="reveal">
-          <span className="subheading">Achievements</span>
-          <h2 style={{ fontSize: 'clamp(3rem, 8vw, 5rem)', marginBottom: '100px' }}>Global <span className="gradient-text">Certifications</span></h2>
+          <span className="subheading">Proof of Expertise</span>
+          <h2 style={{ fontSize: 'clamp(3rem, 8vw, 5rem)', marginBottom: '100px' }}>Global <span className="gradient-text">Credentials</span></h2>
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '140px' }}>
           {/* Professional Section */}
           <div>
             <div className="reveal" style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '60px' }}>
-              <h3 style={{ fontSize: '2rem', color: 'var(--accent-primary)', borderLeft: '4px solid var(--accent-primary)', paddingLeft: '24px', margin: 0 }}>Professional Credentials</h3>
-              <div style={{ height: '1px', flex: 1, background: 'linear-gradient(90deg, var(--accent-primary), transparent)', opacity: 0.15 }} />
+              <h3 style={{ fontSize: '2rem', color: 'white', borderLeft: '4px solid white', paddingLeft: '24px', margin: 0 }}>Professional Credentials</h3>
+              <div style={{ height: '1px', flex: 1, background: 'linear-gradient(90deg, white, transparent)', opacity: 0.1 }} />
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(380px, 1fr))', gap: '40px' }}>
               {[
@@ -221,9 +262,9 @@ function App() {
               ].map((cert, i) => (
                 <div key={i} className="reveal" style={{ transitionDelay: `${i * 0.1}s` }}>
                   <div className="glass card-hover" style={{ padding: '40px', display: 'flex', flexDirection: 'column', height: '100%' }}>
-                    <img src={cert.img} alt={cert.title} style={{ width: '100%', borderRadius: '16px', marginBottom: '32px', border: '1px solid var(--border-color)' }} />
+                    <img src={cert.img} alt={cert.title} style={{ width: '100%', borderRadius: '16px', marginBottom: '32px', border: '1px solid var(--border-color)', filter: 'grayscale(1)' }} />
                     <h4 style={{ fontSize: '20px', marginBottom: '12px', color: 'white' }}>{cert.title}</h4>
-                    <p style={{ color: 'var(--accent-primary)', fontSize: '13px', fontWeight: 800, marginBottom: '20px', letterSpacing: '0.05em' }}>ORACLE / NEO4J</p>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '13px', fontWeight: 800, marginBottom: '20px', letterSpacing: '0.05em' }}>ORACLE / NEO4J</p>
                     <p style={{ fontSize: '15px', color: 'var(--text-secondary)', lineHeight: '1.6' }}>{cert.desc}</p>
                   </div>
                 </div>
@@ -231,11 +272,11 @@ function App() {
             </div>
           </div>
 
-          {/* Completion Section */}
+          {/* Specializations Section */}
           <div>
             <div className="reveal" style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '60px' }}>
-              <h3 style={{ fontSize: '2rem', color: 'var(--accent-secondary)', borderLeft: '4px solid var(--accent-secondary)', paddingLeft: '24px', margin: 0 }}>Specializations</h3>
-              <div style={{ height: '1px', flex: 1, background: 'linear-gradient(90deg, var(--accent-secondary), transparent)', opacity: 0.15 }} />
+              <h3 style={{ fontSize: '2rem', color: 'var(--text-secondary)', borderLeft: '4px solid var(--text-secondary)', paddingLeft: '24px', margin: 0 }}>Course Completion</h3>
+              <div style={{ height: '1px', flex: 1, background: 'linear-gradient(90deg, var(--text-secondary), transparent)', opacity: 0.1 }} />
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(380px, 1fr))', gap: '40px' }}>
               {[
@@ -244,9 +285,9 @@ function App() {
               ].map((cert, i) => (
                 <div key={i} className="reveal" style={{ transitionDelay: `${i * 0.1}s` }}>
                   <div className="glass card-hover" style={{ padding: '40px', display: 'flex', flexDirection: 'column', height: '100%' }}>
-                    <img src={cert.img} alt={cert.title} style={{ width: '100%', borderRadius: '16px', marginBottom: '32px', border: '1px solid var(--border-color)' }} />
+                    <img src={cert.img} alt={cert.title} style={{ width: '100%', borderRadius: '16px', marginBottom: '32px', border: '1px solid var(--border-color)', filter: 'grayscale(1)' }} />
                     <h4 style={{ fontSize: '20px', marginBottom: '12px', color: 'white' }}>{cert.title}</h4>
-                    <p style={{ color: 'var(--accent-secondary)', fontSize: '13px', fontWeight: 800, marginBottom: '20px', letterSpacing: '0.05em' }}>{cert.provider}</p>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '13px', fontWeight: 800, marginBottom: '20px', letterSpacing: '0.05em' }}>{cert.provider}</p>
                     <p style={{ fontSize: '15px', color: 'var(--text-secondary)', lineHeight: '1.6' }}>{cert.desc}</p>
                   </div>
                 </div>

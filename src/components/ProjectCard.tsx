@@ -22,7 +22,7 @@ export default function ProjectCard({ title, description, tags, link, image, dem
             <div style={{ padding: '40px', display: 'flex', flexDirection: 'column', gap: '20px', flexGrow: 1 }}>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
                     {tags.map(tag => (
-                        <span key={tag} style={{ fontSize: '10px', fontWeight: 800, color: 'var(--accent-primary)', background: 'rgba(129, 140, 248, 0.05)', padding: '6px 14px', borderRadius: '100px', border: '1px solid rgba(129, 140, 248, 0.1)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                        <span key={tag} style={{ fontSize: '10px', fontWeight: 800, color: 'white', background: 'rgba(255,255,255,0.03)', padding: '6px 14px', borderRadius: '100px', border: '1px solid rgba(255,255,255,0.05)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                             {tag}
                         </span>
                     ))}
@@ -34,7 +34,7 @@ export default function ProjectCard({ title, description, tags, link, image, dem
                         href={link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        style={{ color: 'white', fontWeight: 700, textDecoration: 'none', borderBottom: '1px solid var(--border-color)', paddingBottom: '4px', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.05em' }}
+                        style={{ color: 'white', fontWeight: 700, textDecoration: 'none', borderBottom: '1px solid white', paddingBottom: '4px', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.05em' }}
                     >
                         Source Code
                     </a>
@@ -43,7 +43,7 @@ export default function ProjectCard({ title, description, tags, link, image, dem
                             href={demoLink}
                             target="_blank"
                             rel="noopener noreferrer"
-                            style={{ color: 'var(--accent-secondary)', fontWeight: 700, textDecoration: 'none', borderBottom: '1px solid var(--accent-secondary)', paddingBottom: '4px', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.05em' }}
+                            style={{ color: 'white', fontWeight: 700, textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.3)', paddingBottom: '4px', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.1em' }}
                         >
                             Live View
                         </a>
