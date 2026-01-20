@@ -93,22 +93,20 @@ function App() {
         <div style={{ padding: '120px 0', textAlign: 'center' }}>
           <div className="float-anim reveal">
             <span className="subheading">Full Stack & Mobile Engineer @ Campulse</span>
-            <h1 style={{ fontSize: 'clamp(4rem, 15vw, 10rem)', lineHeight: 0.8, marginBottom: '60px' }}>
-              Building <br />
-              <span className="gradient-text">Intelligent</span> <br />
-              Digital Value
+            <h1 style={{ fontSize: 'clamp(3rem, 10vw, 7rem)', lineHeight: 1.1, marginBottom: '40px' }}>
+              I am <span className="gradient-text" style={{ display: 'block' }}>Christian Eighemhenrio.</span>
             </h1>
           </div>
           <div className="reveal" style={{ transitionDelay: '0.2s' }}>
-            <p style={{ color: 'var(--text-secondary)', maxWidth: '650px', margin: '0 auto 60px', fontSize: '1.25rem', fontWeight: 400, lineHeight: 1.6 }}>
-              Architecting high-performance systems and immersive mobile experiences. Specializing in the intersection of Full-Stack, Mobile, and AI-driven solutions.
+            <p style={{ color: 'var(--text-secondary)', maxWidth: '850px', margin: '0 auto 60px', fontSize: 'clamp(1.1rem, 2vw, 1.4rem)', fontWeight: 400, lineHeight: 1.7 }}>
+              A visionary <span style={{ color: 'white', fontWeight: 600 }}>Full-Stack & Backend Architect</span> specializing in the synthesis of <span style={{ color: 'white', fontWeight: 600 }}>Generative AI, High-Performance Cloud Infrastructure, and Premium Mobile Experiences</span>. I engineer robust backend systems that power intelligent ecosystems, bridging the gap between complex data structures and intuitive human interaction. With a relentless drive to do <span style={{ color: 'white', fontWeight: 600 }}>whatever it takes</span>, I transform ambitious ideas into high-performance digital reality.
             </p>
-            <div style={{ display: 'flex', gap: '24px', justifyContent: 'center' }}>
+            <div style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap' }}>
               <button className="btn-premium" onClick={() => document.getElementById('experience')?.scrollIntoView()}>
-                The Journey
+                Explore My Journey
               </button>
               <a href="https://github.com/christian759" target="_blank" className="glass" style={{ padding: '18px 48px', borderRadius: '16px', fontWeight: 700, display: 'inline-flex', alignItems: 'center', textDecoration: 'none', color: 'white', textTransform: 'uppercase', fontSize: '0.9rem', letterSpacing: '0.05em' }}>
-                GitHub
+                View GitHub
               </a>
             </div>
           </div>
