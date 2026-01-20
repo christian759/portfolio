@@ -119,7 +119,7 @@ function App() {
           </div>
           <div className="reveal" style={{ transitionDelay: '0.2s' }}>
             <p style={{ color: 'var(--text-secondary)', maxWidth: '850px', margin: '0 auto 60px', fontSize: 'clamp(1.1rem, 2vw, 1.4rem)', fontWeight: 400, lineHeight: 1.7 }}>
-              A visionary <span style={{ color: 'white', fontWeight: 600 }}>Full-Stack & Backend Architect</span> specializing in the synthesis of <span style={{ color: 'white', fontWeight: 600 }}>Generative AI, High-Performance Cloud Infrastructure, and Premium Mobile Experiences</span>. I engineer robust backend systems that power intelligent ecosystems, bridging the gap between complex data structures and intuitive human interaction. With a relentless drive to do <span style={{ color: 'white', fontWeight: 600 }}>whatever it takes</span>, I transform ambitious ideas into high-performance digital reality.
+              A visionary <span style={{ color: 'white', fontWeight: 600 }}>Full-Stack & AI Specialist</span> specializing in the synthesis of <span style={{ color: 'white', fontWeight: 600 }}>Generative AI, High-Performance Cloud Infrastructure, and Premium Mobile Experiences</span>. I engineer robust backend systems that power intelligent ecosystems, bridging the gap between complex data structures and intuitive human interaction. With a relentless drive to do <span style={{ color: 'white', fontWeight: 600 }}>whatever it takes</span>, I transform ambitious ideas into high-performance digital reality.
             </p>
             <div style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap' }}>
               <button className="btn-premium" onClick={() => document.getElementById('experience')?.scrollIntoView()}>
