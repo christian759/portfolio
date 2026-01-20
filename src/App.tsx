@@ -140,7 +140,7 @@ function App() {
           <h2 style={{ fontSize: 'clamp(3rem, 8vw, 5rem)', marginBottom: '100px', maxWidth: '800px' }}>Professional <span className="gradient-text">Trajectory</span> @ Campulse.</h2>
         </div>
 
-        <div className="glass reveal" style={{ padding: '80px', transitionDelay: '0.1s' }}>
+        <div className="glass reveal" style={{ padding: '80px', transitionDelay: '0.1s', marginBottom: '40px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '24px', marginBottom: '40px' }}>
             <div>
               <h3 style={{ fontSize: '32px', marginBottom: '8px' }}>Full Stack & Mobile Developer</h3>
@@ -156,6 +156,19 @@ function App() {
               <span key={tag} className="glass" style={{ fontSize: '12px', fontWeight: 700, padding: '10px 24px', borderRadius: '100px', background: 'rgba(255,255,255,0.03)' }}>{tag}</span>
             ))}
           </div>
+        </div>
+
+        <div className="glass reveal" style={{ padding: '80px', transitionDelay: '0.2s', border: '1px solid rgba(255,255,255,0.03)', background: 'transparent' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '24px', marginBottom: '40px' }}>
+            <div>
+              <h3 style={{ fontSize: '32px', marginBottom: '8px' }}>B.Eng. Computer Engineering</h3>
+              <p style={{ color: 'white', fontWeight: 700, fontSize: '1.2rem' }}>University of Ilorin (UNILORIN)</p>
+            </div>
+            <span style={{ fontSize: '14px', fontWeight: 600, opacity: 0.6, letterSpacing: '0.05em' }}>2024 — PRESENT (200 LEVEL)</span>
+          </div>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', maxWidth: '900px', lineHeight: '1.8' }}>
+            Building a rigorous technical foundation in circuit theory, digital logic, and computer systems. Applying theoretical engineering principles to create robust and efficient software architectures while maintaining academic excellence.
+          </p>
         </div>
       </Section>
 
