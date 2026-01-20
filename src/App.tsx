@@ -147,17 +147,17 @@ function App() {
           <span className="subheading">Crafted Works</span>
           <h2 style={{ fontSize: 'clamp(3rem, 8vw, 5rem)', marginBottom: '100px' }}>Project <span className="gradient-text">Stories</span></h2>
         </div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '200px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(80px, 15vw, 200px)' }}>
           {projects.map((project, index) => (
             <div key={index} className="reveal" style={{ transitionDelay: `${index * 0.1}s` }}>
               <div style={{
                 display: 'flex',
-                flexDirection: index % 2 === 0 ? 'row' : 'row-reverse',
-                gap: '80px',
+                flexDirection: 'row',
+                gap: 'clamp(32px, 5vw, 80px)',
                 alignItems: 'center',
                 flexWrap: 'wrap'
               }}>
-                <div style={{ flex: '1', minWidth: '320px' }}>
+                <div style={{ flex: '1', minWidth: 'min(320px, 100%)' }}>
                   <div className="glass" style={{ borderRadius: '40px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.05)', position: 'relative', aspectRatio: '16/10' }}>
                     {project.images ? (
                       <div className="image-gallery" style={{ height: '100%', position: 'relative' }}>
@@ -173,7 +173,7 @@ function App() {
                     )}
                   </div>
                 </div>
-                <div style={{ flex: '1', minWidth: '320px' }}>
+                <div style={{ flex: '1', minWidth: 'min(320px, 100%)' }}>
                   <span style={{ fontSize: '14px', fontWeight: 800, opacity: 0.3, letterSpacing: '0.3em', textTransform: 'uppercase', display: 'block', marginBottom: '24px' }}>Project {index + 1}</span>
                   <h3 style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', marginBottom: '32px', lineHeight: 1.1 }}>{project.title}</h3>
                   <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', lineHeight: 1.7, marginBottom: '40px' }}>
@@ -204,7 +204,7 @@ function App() {
           <h2 style={{ fontSize: 'clamp(3rem, 8vw, 5rem)', marginBottom: '100px' }}>Additional <span className="gradient-text">Developments</span></h2>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '32px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(350px, 100%), 1fr))', gap: '24px' }}>
           {[
             {
               title: "SmartChain",
@@ -237,7 +237,7 @@ function App() {
           <h2 style={{ fontSize: 'clamp(3rem, 8vw, 5rem)', marginBottom: '80px' }}>Areas of <span className="gradient-text">Expertise</span></h2>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '32px', marginBottom: '120px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(400px, 100%), 1fr))', gap: '24px', marginBottom: '80px' }}>
           {[
             {
               title: "Generative AI & RAG",
