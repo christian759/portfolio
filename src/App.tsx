@@ -32,7 +32,15 @@ function App() {
       title: "QueryIQ | Advanced RAG Intelligence",
       description: "A state-of-the-art Retrieval-Augmented Generation (RAG) system designed to bridge the gap between static data and dynamic AI responses. Built with Python and integrated with the Gemini API, QueryIQ processes massive datasets to provide context-aware, hyper-accurate answers. It features an advanced semantic search engine, sophisticated prompt engineering architectures, and a custom data-chunking pipeline that ensures maximum retrieval relevance while minimizing token overhead.",
       tags: ["AI", "RAG", "Python", "Gemini API", "Semantic Search"],
-      link: "https://github.com/christian759/QueryIQ"
+      link: "https://github.com/christian759/QueryIQ",
+      demoLink: "https://query-iq.streamlit.app/"
+    },
+    {
+      title: "Object Detection | Computer Vision",
+      description: "A sophisticated computer vision application that performs real-time object detection and classification. Leveraging Python and advanced deep learning models, this system identifies multiple objects within a scene with high precision. It features a responsive Streamlit interface for seamless user interaction and demonstrates the power of modern AI in processing visual data.",
+      tags: ["AI", "Computer Vision", "Python", "Streamlit", "Deep Learning"],
+      link: "https://github.com/christian759/detection",
+      demoLink: "https://objects-detection.streamlit.app/"
     },
     {
       title: "Statify | High-Performance Analytics",
@@ -147,31 +155,33 @@ function App() {
         <div className="glass" style={{ padding: '100px 60px' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '100px' }}>
             <div>
-              <h3 style={{ marginBottom: '40px', color: 'var(--accent-primary)', fontSize: '24px' }}>Full Stack & AI</h3>
+              <h3 style={{ marginBottom: '40px', color: 'var(--accent-primary)', fontSize: '24px' }}>AI & Data Intelligence</h3>
               <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '20px', color: 'var(--text-secondary)', fontSize: '1.1rem' }}>
-                <li>RAG Architectures</li>
-                <li>LLM Integration (Gemini)</li>
+                <li><b>RAG Architectures</b> & LLM Orchestration</li>
+                <li>Generative AI (Gemini, OpenAI API)</li>
                 <li><b>Certified Neo4j Graph Data Scientist</b></li>
-                <li>Node.js / Express</li>
-                <li>Python (Streamlit)</li>
+                <li>Computer Vision (Object Detection, ML Kit)</li>
+                <li>Python, Streamlit, LangChain</li>
               </ul>
             </div>
             <div>
-              <h3 style={{ marginBottom: '40px', color: 'var(--accent-secondary)', fontSize: '24px' }}>Frontend Expertise</h3>
+              <h3 style={{ marginBottom: '40px', color: 'var(--accent-secondary)', fontSize: '24px' }}>Fullstack Engineering</h3>
               <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '20px', color: 'var(--text-secondary)', fontSize: '1.1rem' }}>
-                <li>React / TypeScript</li>
-                <li>Performance Tuning</li>
-                <li>Creative CSS / 3D Layouts</li>
-                <li>Design System Arch</li>
+                <li><b>Scalable React / TypeScript</b> Arch</li>
+                <li>Node.js, Express, Go (Internal Tools)</li>
+                <li>PostgreSQL, Neo4j, Redis</li>
+                <li>Robust API Design & Security</li>
+                <li>Performance Optimization & Virtualization</li>
               </ul>
             </div>
             <div>
-              <h3 style={{ marginBottom: '40px', color: 'white', fontSize: '24px' }}>Technical Breadth</h3>
+              <h3 style={{ marginBottom: '40px', color: 'white', fontSize: '24px' }}>Frontend Excellence</h3>
               <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '20px', color: 'var(--text-secondary)', fontSize: '1.1rem' }}>
-                <li>Kotlin (Android)</li>
-                <li>Google ML Kit</li>
-                <li>Java / LangChain</li>
-                <li>DevOps / Git / CI/CD</li>
+                <li><b>Premium UI/UX Design</b> Systems</li>
+                <li>Advanced CSS (3D, Glassmorphism, Animations)</li>
+                <li>Responsive & Accessible Web Design</li>
+                <li>Frontend Performance Tuning</li>
+                <li>Vite, Webpack, Modern Tooling</li>
               </ul>
             </div>
           </div>
