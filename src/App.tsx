@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import Section from './components/Section';
-import ProjectCard from './components/ProjectCard';
 import './App.css';
 
 function App() {
@@ -46,6 +45,7 @@ function App() {
       description: "An enterprise-grade financial analytics dashboard engineered for performance. Leveraging React and TypeScript with custom virtualization logic and D3-powered visualizations, Statify provides real-time insights with zero-lag interactions.",
       tags: ["Frontend", "TypeScript", "Performance", "React"],
       link: "https://github.com/christian759/statify",
+      demoLink: "https://statifydata.vercel.app/",
       images: ["/statify-1.png", "/statify-2.png"]
     },
     {
