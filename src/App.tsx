@@ -161,11 +161,11 @@ function App() {
                   <div className="glass" style={{ borderRadius: '40px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.05)', position: 'relative', aspectRatio: '16/10' }}>
                     {project.images ? (
                       <div className="image-gallery" style={{ height: '100%', position: 'relative' }}>
-                        <img src={project.images[0]} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
-                        <img src={project.images[1]} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', position: 'absolute', top: 0, left: 0, opacity: 0, transition: 'opacity 0.8s ease' }} className="hover-image" />
+                        <img src={project.images[0]} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }} />
+                        <img src={project.images[1]} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block', position: 'absolute', top: 0, left: 0, opacity: 0, transition: 'opacity 0.8s ease' }} className="hover-image" />
                       </div>
                     ) : project.image ? (
-                      <img src={project.image} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                      <img src={project.image} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }} />
                     ) : (
                       <div style={{ aspectRatio: '16/9', background: 'rgba(255,255,255,0.02)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                         <span style={{ fontSize: '80px', opacity: 0.05 }}>❖</span>
@@ -297,7 +297,7 @@ function App() {
             <span style={{ fontSize: 'clamp(2.5rem, 9vw, 7rem)', fontWeight: 800, color: 'white', textDecoration: 'underline', textUnderlineOffset: '14px' }}>Go</span>
             <span style={{ fontSize: 'clamp(1.8rem, 5vw, 4rem)', fontWeight: 600, color: 'white' }}>Three.js</span>
             <span style={{ fontSize: 'clamp(1.5rem, 4vw, 3rem)', fontWeight: 400, color: 'var(--text-secondary)' }}>PostgreSQL</span>
-            <span style={{ fontSize: 'clamp(1.2rem, 3vw, 2.5rem)', fontWeight: 300, color: 'var(--text-secondary)' }}>LangChain</span>
+            <span style={{ fontSize: '1.2rem', fontWeight: 300, color: 'var(--text-secondary)' }}>LangChain</span>
             <span style={{ fontSize: 'clamp(1.5rem, 4vw, 3.5rem)', fontWeight: 700, color: 'white' }}>Oracle Cloud</span>
           </div>
 
@@ -309,7 +309,8 @@ function App() {
             border: '1px solid rgba(255,255,255,0.05)'
           }}>
             <p style={{ fontSize: '1.5rem', fontWeight: 400, color: 'var(--text-secondary)', maxWidth: '800px', margin: '0 auto', lineHeight: 1.6 }}>
-              "I don't just write code. I architect <span style={{ color: 'white', fontWeight: 700 }}>Intelligent Ecosystems</span> where data flows seamlessly between AI, Mobile, and Web."
+              "If you really want something, you should be able to do whatever it takes to achieve it." <br />
+              <span style={{ color: 'white', fontWeight: 700, fontSize: '0.9rem', marginTop: '16px', display: 'block', opacity: 0.6, letterSpacing: '0.2em' }}>— THE MANTRA</span>
             </p>
           </div>
         </div>
@@ -330,7 +331,7 @@ function App() {
             { img: "/oracle-cert.png", title: "OCI 2025 Developer Professional", provider: "ORACLE", desc: "Expertise in cloud-native app development, OCI DevOps, and serverless architectures." },
             { img: "/oracle-ai-cert.png", title: "OCI 2025 Generative AI Professional", provider: "ORACLE", desc: "Advanced LLM orchestration, RAG systems, and AI-driven cloud solutions." },
             { img: "/oracle-ds-cert.png", title: "OCI 2025 Data Science Professional", provider: "ORACLE", desc: "Machine learning lifecycle mastery: exploration, training, and model deployment." },
-            { img: "/oracle-found-cert.png", title: "OCI 2025 Foundations Associate", provider: "ORACLE", desc: "Comprehensive understanding of OCI core services, security, and cloud economics." },
+            { img: "/oracle-foundation-cert.png", title: "OCI 2025 Foundations Associate", provider: "ORACLE", desc: "Comprehensive understanding of OCI core services, security, and cloud economics." },
             { img: "/neo4j-cert.png", title: "Neo4j Graph Data Science", provider: "NEO4J", desc: "Certified in graph algorithms and high-performance predictive graph modeling." },
           ].map((cert, i) => (
             <div key={i} className="reveal" style={{ transitionDelay: `${i * 0.1}s`, scrollSnapAlign: 'center' }}>
