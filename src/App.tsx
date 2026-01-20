@@ -161,11 +161,11 @@ function App() {
                   <div className="glass" style={{ borderRadius: '40px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.05)', position: 'relative', aspectRatio: '16/10' }}>
                     {project.images ? (
                       <div className="image-gallery" style={{ height: '100%', position: 'relative' }}>
-                        <img src={project.images[0]} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', filter: 'grayscale(1) contrast(1.1)' }} />
-                        <img src={project.images[1]} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', filter: 'grayscale(1) contrast(1.1)', position: 'absolute', top: 0, left: 0, opacity: 0, transition: 'opacity 0.8s ease' }} className="hover-image" />
+                        <img src={project.images[0]} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                        <img src={project.images[1]} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', position: 'absolute', top: 0, left: 0, opacity: 0, transition: 'opacity 0.8s ease' }} className="hover-image" />
                       </div>
                     ) : project.image ? (
-                      <img src={project.image} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', filter: 'grayscale(1) contrast(1.1)' }} />
+                      <img src={project.image} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                     ) : (
                       <div style={{ aspectRatio: '16/9', background: 'rgba(255,255,255,0.02)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                         <span style={{ fontSize: '80px', opacity: 0.05 }}>❖</span>
@@ -197,6 +197,39 @@ function App() {
         </div>
       </Section>
 
+      {/* Other Projects Section */}
+      <Section id="other-projects">
+        <div className="reveal">
+          <span className="subheading">Technical Explorations</span>
+          <h2 style={{ fontSize: 'clamp(3rem, 8vw, 5rem)', marginBottom: '100px' }}>Additional <span className="gradient-text">Developments</span></h2>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '32px' }}>
+          {[
+            {
+              title: "SmartChain",
+              link: "https://github.com/christian759/smartchain",
+              desc: "This sample code demonstrates the use of the LangChain Java framework with OCI Gen AI Service. The sample supports Large Language Model, HTTP Request Chain and SQL Chain for Oracle Database."
+            },
+            {
+              title: "SmartLens",
+              link: "https://github.com/christian759/SmartLens",
+              desc: "AI Mobile app for text detection using Google ML KIT. Focuses on high-accuracy real-time text extraction and processing."
+            }
+          ].map((project, i) => (
+            <div key={i} className="glass reveal" style={{ padding: '48px', borderRadius: '32px', transitionDelay: `${i * 0.1}s` }}>
+              <h3 style={{ fontSize: '28px', marginBottom: '20px' }}>{project.title}</h3>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: 1.6, marginBottom: '32px' }}>
+                {project.desc}
+              </p>
+              <a href={project.link} target="_blank" style={{ color: 'white', fontWeight: 700, textDecoration: 'none', borderBottom: '2px solid white', paddingBottom: '4px', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.1em', display: 'inline-block' }}>
+                View Source
+              </a>
+            </div>
+          ))}
+        </div>
+      </Section>
+
       {/* Skills Section - Experimental Layout */}
       <Section id="skills">
         <div className="reveal">
@@ -220,13 +253,13 @@ function App() {
             <span style={{ fontSize: 'clamp(1.5rem, 4vw, 3rem)', fontWeight: 300, fontStyle: 'italic', color: 'var(--text-secondary)' }}>Node.js</span>
             <span style={{ fontSize: 'clamp(2rem, 7vw, 5.5rem)', fontWeight: 800, color: 'white' }}>Generative AI</span>
             <span style={{ fontSize: 'clamp(1.2rem, 3vw, 2.5rem)', fontWeight: 600, color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.2em' }}>Python</span>
-            <span style={{ fontSize: 'clamp(1.8rem, 5vw, 4.5rem)', fontWeight: 400, color: 'white' }}>RAG Architectures</span>
-            <span style={{ fontSize: 'clamp(1.5rem, 4vw, 3.5rem)', fontWeight: 700, color: 'var(--text-secondary)' }}>Native Mobile</span>
+            <span style={{ fontSize: 'clamp(1.8rem, 5vw, 4.5rem)', fontWeight: 400, color: 'white' }}>Cloud Engineering</span>
             <span style={{ fontSize: 'clamp(2.5rem, 9vw, 7rem)', fontWeight: 800, color: 'white', textDecoration: 'underline', textUnderlineOffset: '14px' }}>System Architecture</span>
             <span style={{ fontSize: 'clamp(1.2rem, 3vw, 2.5rem)', fontWeight: 500, color: 'var(--text-secondary)' }}>Go</span>
             <span style={{ fontSize: 'clamp(1.8rem, 5vw, 4rem)', fontWeight: 600, color: 'white' }}>Three.js</span>
+            <span style={{ fontSize: 'clamp(1.5rem, 4vw, 3.5rem)', fontWeight: 700, color: 'var(--text-secondary)' }}>RAG Architectures</span>
             <span style={{ fontSize: 'clamp(1.5rem, 4vw, 3rem)', fontWeight: 400, color: 'var(--text-secondary)' }}>PostgreSQL</span>
-            <span style={{ fontSize: 'clamp(2rem, 6vw, 5rem)', fontWeight: 800, color: 'white' }}>Computer Vision</span>
+            <span style={{ fontSize: 'clamp(2rem, 6vw, 5rem)', fontWeight: 800, color: 'white' }}>OCI Cloud</span>
             <span style={{ fontSize: 'clamp(1.2rem, 3vw, 2.5rem)', fontWeight: 300, color: 'var(--text-secondary)' }}>LangChain</span>
           </div>
 
@@ -248,39 +281,61 @@ function App() {
       <Section id="certifications">
         <div className="reveal">
           <span className="subheading">Proof of Expertise</span>
-          <h2 style={{ fontSize: 'clamp(3rem, 8vw, 5rem)', marginBottom: '100px' }}>Global <span className="gradient-text">Credentials</span></h2>
+          <h2 style={{ fontSize: 'clamp(3rem, 8vw, 5rem)', marginBottom: '50px' }}>Professional <span className="gradient-text">Credentials</span></h2>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', marginBottom: '80px', maxWidth: '700px' }}>
+            Rigorous certifications validating advanced architectural and engineering capabilities in Cloud, AI, and Graph technologies.
+          </p>
         </div>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '250px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '180px', marginBottom: '150px' }}>
           {[
             { img: "/oracle-cert.png", title: "OCI 2025 Developer Professional", provider: "ORACLE", desc: "Expertise in cloud-native app development, OCI DevOps, and serverless architectures." },
             { img: "/oracle-ai-cert.png", title: "OCI 2025 Generative AI Professional", provider: "ORACLE", desc: "Advanced LLM orchestration, RAG systems, and AI-driven cloud solutions." },
             { img: "/oracle-ds-cert.png", title: "OCI 2025 Data Science Professional", provider: "ORACLE", desc: "Machine learning lifecycle mastery: exploration, training, and model deployment." },
+            { img: "/oracle-found-cert.png", title: "OCI 2025 Foundations Associate", provider: "ORACLE", desc: "Comprehensive understanding of OCI core services, security, and cloud economics." },
             { img: "/neo4j-cert.png", title: "Neo4j Graph Data Science", provider: "NEO4J", desc: "Certified in graph algorithms and high-performance predictive graph modeling." },
-            { img: "/great-learning-cert.png", title: "Front End Dev - HTML", provider: "GREAT LEARNING", desc: "Fundamental mastery of semantic structure, accessibility, and modern responsive design." },
-            { img: "/simplilearn-cert.png", title: "Data Science w/ Python & Django", provider: "SIMPLILEARN", desc: "Python-driven data workflows and integration of predictive models into web ecosystems." }
           ].map((cert, i) => (
             <div key={i} className="reveal" style={{ transitionDelay: `${i * 0.1}s`, scrollSnapAlign: 'center' }}>
               <div style={{
                 display: 'flex',
                 flexDirection: i % 2 !== 0 ? 'row' : 'row-reverse',
-                gap: '100px',
+                gap: '80px',
                 alignItems: 'center',
                 flexWrap: 'wrap'
               }}>
-                <div style={{ flex: '1.2', minWidth: '320px' }}>
+                <div style={{ flex: '1', minWidth: '300px' }}>
                   <div className="glass card-hover" style={{ borderRadius: '24px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.08)' }}>
-                    <img src={cert.img} alt={cert.title} style={{ width: '100%', height: 'auto', display: 'block', filter: 'grayscale(1) brightness(0.9)' }} />
+                    <img src={cert.img} alt={cert.title} style={{ width: '100%', height: 'auto', display: 'block' }} />
                   </div>
                 </div>
                 <div style={{ flex: '1', minWidth: '320px' }}>
                   <span style={{ fontSize: '13px', fontWeight: 800, opacity: 0.4, letterSpacing: '0.4em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>{cert.provider}</span>
-                  <h3 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.8rem)', marginBottom: '24px', lineHeight: 1.2 }}>{cert.title}</h3>
+                  <h3 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.5rem)', marginBottom: '24px', lineHeight: 1.2 }}>{cert.title}</h3>
                   <p style={{ color: 'var(--text-secondary)', fontSize: '1.15rem', lineHeight: 1.8, maxWidth: '500px' }}>
                     {cert.desc}
                   </p>
                 </div>
               </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="reveal">
+          <h2 style={{ fontSize: 'clamp(3rem, 8vw, 5rem)', marginBottom: '80px' }}>Academic <span className="gradient-text">Completions</span></h2>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '40px' }}>
+          {[
+            { img: "/great-learning-cert.png", title: "Front End Dev - HTML", provider: "GREAT LEARNING", desc: "Fundamental mastery of semantic structure, accessibility, and modern responsive design." },
+            { img: "/simplilearn-cert.png", title: "Data Science w/ Python & Django", provider: "SIMPLILEARN", desc: "Python-driven data workflows and integration of predictive models into web ecosystems." }
+          ].map((cert, i) => (
+            <div key={i} className="glass reveal" style={{ padding: '40px', borderRadius: '32px', transitionDelay: `${i * 0.1}s` }}>
+              <div style={{ borderRadius: '16px', overflow: 'hidden', marginBottom: '32px', border: '1px solid rgba(255,255,255,0.05)' }}>
+                <img src={cert.img} alt={cert.title} style={{ width: '100%', height: 'auto', display: 'block' }} />
+              </div>
+              <span style={{ fontSize: '11px', fontWeight: 800, opacity: 0.4, letterSpacing: '0.3em', textTransform: 'uppercase', display: 'block', marginBottom: '16px' }}>{cert.provider}</span>
+              <h3 style={{ fontSize: '24px', marginBottom: '16px' }}>{cert.title}</h3>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', lineHeight: 1.6 }}>{cert.desc}</p>
             </div>
           ))}
         </div>
