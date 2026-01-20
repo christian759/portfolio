@@ -4,23 +4,43 @@ import './App.css';
 
 function App() {
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (winScroll / height) * 100;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const winScroll = window.pageYOffset || document.documentElement.scrollTop;
+          const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          const scrolled = (winScroll / height) * 100;
 
-      const lightX = 20 + (scrolled * 0.6);
-      const lightY = 10 + (scrolled * 0.7);
+          // Dynamic directional light calculation
+          const lightX = 20 + (scrolled * 0.6);
+          const lightY = 10 + (scrolled * 0.8);
 
-      document.documentElement.style.setProperty('--light-x', `${lightX}%`);
-      document.documentElement.style.setProperty('--light-y', `${lightY}%`);
-      document.documentElement.style.setProperty('--scroll-pct', scrolled.toString());
+          document.documentElement.style.setProperty('--light-x', `${lightX}%`);
+          document.documentElement.style.setProperty('--light-y', `${lightY}%`);
+          document.documentElement.style.setProperty('--scroll-pct', scrolled.toString());
+
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    const handleMouseMove = (e: MouseEvent) => {
+      const x = (e.clientX / window.innerWidth) * 100;
+      const y = (e.clientY / window.innerHeight) * 100;
+      document.documentElement.style.setProperty('--mouse-x', `${x}%`);
+      document.documentElement.style.setProperty('--mouse-y', `${y}%`);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('mousemove', handleMouseMove);
     handleScroll();
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
   }, []);
 
   const projects = [
@@ -253,6 +273,11 @@ function App() {
               tags: ["React", "TypeScript", "Node.js", "App Design"]
             },
             {
+              title: "Frontend Development",
+              desc: "Crafting immersive, high-conversion user interfaces with React and Three.js. Specialized in complex animations, responsive design systems, and pixel-perfect execution.",
+              tags: ["React", "Three.js", "Framer Motion", "UI/UX"]
+            },
+            {
               title: "Graph Data Science",
               desc: "Analyzing complex relationship-based data using Neo4j. Implementing graph algorithms and high-speed predictive modeling for interconnected datasets.",
               tags: ["Neo4j", "Cypher", "GDS", "Network Analysis"]
@@ -378,13 +403,43 @@ function App() {
         </div>
       </Section>
 
-      {/* Footer */}
-      <footer style={{ padding: '120px 0', textAlign: 'center', borderTop: '1px solid var(--border-color)', marginTop: '100px' }}>
-        <p className="reveal" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', letterSpacing: '0.05em' }}>
-          ENGINEERED WITH PURPOSE BY <span className="gradient-text" style={{ fontWeight: 800 }}>christian759</span>
-          <br />
-          <span style={{ fontSize: '0.75rem', opacity: 0.4, marginTop: '12px', display: 'block' }}>© 2026. BUILT WITH REACT, THREE.JS & PASSION.</span>
-        </p>
+      {/* Premium Footer */}
+      <footer style={{ padding: '150px 0 80px', borderTop: '1px solid var(--border-color)', marginTop: '100px', background: 'linear-gradient(to bottom, transparent, rgba(255,255,255,0.01))' }}>
+        <div className="container">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '80px', textAlign: 'left', marginBottom: '100px' }}>
+            <div className="reveal">
+              <h3 style={{ fontSize: '24px', marginBottom: '24px' }}>Christian Eighemhenrio</h3>
+              <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6, maxWidth: '300px' }}>
+                Architecting the future of intelligent digital systems. Full-Stack, Backend, and AI specialist.
+              </p>
+            </div>
+            <div className="reveal" style={{ transitionDelay: '0.1s' }}>
+              <h4 style={{ fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '32px', opacity: 0.5 }}>Navigation</h4>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                <li><a href="#home" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '14px' }}>Home</a></li>
+                <li><a href="#experience" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '14px' }}>Career</a></li>
+                <li><a href="#projects" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '14px' }}>Projects</a></li>
+                <li><a href="#skills" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '14px' }}>Expertise</a></li>
+              </ul>
+            </div>
+            <div className="reveal" style={{ transitionDelay: '0.2s' }}>
+              <h4 style={{ fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '32px', opacity: 0.5 }}>Connect</h4>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                <li><a href="https://github.com/christian759" target="_blank" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '14px' }}>GitHub</a></li>
+                <li><a href="#" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '14px' }}>LinkedIn</a></li>
+                <li><a href="#" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '14px' }}>Twitter</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="reveal" style={{ textAlign: 'center', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '60px' }}>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', letterSpacing: '0.05em' }}>
+              DO <span className="gradient-text" style={{ fontWeight: 800 }}>WHATEVER IT TAKES</span> TO ACHIEVE EXCELLENCE.
+              <br />
+              <span style={{ fontSize: '0.75rem', opacity: 0.4, marginTop: '24px', display: 'block' }}>© 2026 CHRISTIAN EIGHEMHENRIO. ALL RIGHTS RESERVED.</span>
+            </p>
+          </div>
+        </div>
       </footer>
     </div>
   );
