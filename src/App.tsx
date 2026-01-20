@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Section from './components/Section';
 import ProjectCard from './components/ProjectCard';
 import './App.css';
@@ -9,8 +9,6 @@ function App() {
       const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scrolled = (winScroll / height) * 100;
-
-      setScrollPct(scrolled);
 
       // Map scroll percentage to a "arc" path for the directional light
       // The light starts at top-left (10, 10) and moves towards bottom-right (90, 90)
@@ -49,6 +47,13 @@ function App() {
       link: "https://github.com/christian759/SmartLens"
     },
     {
+      title: "Clinix | Modern Healthcare Platform",
+      description: "A comprehensive healthcare management system built with TypeScript and advanced frontend patterns. Clinix streamlines patient management, appointment scheduling, and clinic operations with a focus on high-performance delivery and premium user experience. It features modular architecture, real-time data handling, and a sophisticated design system tailored for medical professionals.",
+      tags: ["Frontend", "TypeScript", "Healthcare", "UX"],
+      link: "https://github.com/christian759/clinix",
+      image: "/clinix-preview.png"
+    },
+    {
       title: "DocuFlow | Premium Design System",
       description: "A comprehensive design system and documentation framework built with a 'design-first' philosophy. DocuFlow provides a suite of high-fidelity, accessible UI components specifically optimized for technical workflows. It features a custom CSS architecture that prioritizes modularity and developer experience (DX), alongside deep glassmorphism themes and advanced layout engines that ensure document flows remain consistent and visually stunning across all platforms.",
       tags: ["Frontend", "CSS", "UI/UX", "Design Systems", "Architecture"],
@@ -68,6 +73,7 @@ function App() {
           <li><a href="#experience" style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Experience</a></li>
           <li><a href="#projects" style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Projects</a></li>
           <li><a href="#skills" style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Skills</a></li>
+          <li><a href="#certifications" style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Certifications</a></li>
         </ul>
       </nav>
 
@@ -145,6 +151,7 @@ function App() {
               <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '20px', color: 'var(--text-secondary)', fontSize: '1.1rem' }}>
                 <li>RAG Architectures</li>
                 <li>LLM Integration (Gemini)</li>
+                <li><b>Certified Neo4j Graph Data Scientist</b></li>
                 <li>Node.js / Express</li>
                 <li>Python (Streamlit)</li>
               </ul>
@@ -167,6 +174,25 @@ function App() {
                 <li>DevOps / Git / CI/CD</li>
               </ul>
             </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Certifications Section */}
+      <Section id="certifications">
+        <span className="subheading">Achievements</span>
+        <h2 style={{ fontSize: '3rem', marginBottom: '60px' }}>Professional <span className="gradient-text">Certifications</span></h2>
+        <div className="glass" style={{ padding: '40px', textAlign: 'center' }}>
+          <img
+            src="/neo4j-cert.png"
+            alt="Neo4j Graph Data Science Certified"
+            style={{ width: '100%', maxWidth: '800px', borderRadius: '16px', boxShadow: '0 20px 40px rgba(0,0,0,0.4)', border: '1px solid var(--border-color)' }}
+          />
+          <div style={{ marginTop: '32px' }}>
+            <h3 style={{ fontSize: '24px', marginBottom: '8px' }}>Neo4j Graph Data Science Certified</h3>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem' }}>
+              Recognized for expertise in graph algorithms, graph data science workflows, and implementing scalable graph-based AI solutions.
+            </p>
           </div>
         </div>
       </Section>
