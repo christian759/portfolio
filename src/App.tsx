@@ -30,6 +30,7 @@ function App() {
       description: "A visually stunning 3D globe visualization project that maps worldwide connections and data points in real-time. Built with Three.js and React, Chronosphere features high-performance 3D rendering and interactive markers.",
       tags: ["3D", "Three.js", "React", "Data Viz"],
       link: "https://github.com/christian759/chronosphere",
+      demoLink: "https://chronosphere-alpha.vercel.app/",
       image: "/chronosphere.png"
     },
     {
@@ -46,22 +47,25 @@ function App() {
       link: "https://github.com/christian759/statify"
     },
     {
-      title: "SmartLens | AI-Powered Vision",
-      description: "A cutting-edge Android application leveraging Google ML Kit for high-speed device-side OCR and object detection. Developed in Kotlin with efficient camera pipelines.",
-      tags: ["Mobile", "AI", "Kotlin", "Computer Vision"],
-      link: "https://github.com/christian759/SmartLens"
+      title: "Object Detection | Real-time Vision",
+      description: "A high-performance object detection system leveraging computer vision to identify and track objects in real-time with high precision.",
+      tags: ["AI", "Python", "Computer Vision", "Streamlit"],
+      link: "https://github.com/christian759/object-detection",
+      demoLink: "https://object-detection-p.streamlit.app/",
+      image: "/object-detection.png"
     },
     {
       title: "Clinix | Modern Healthcare Platform",
       description: "A comprehensive healthcare management system built with TypeScript. Clinix streamlines patient management and clinic operations with a focus on UX.",
       tags: ["Frontend", "TypeScript", "Healthcare", "UX"],
       link: "https://github.com/christian759/clinix",
+      demoLink: "https://clinix-rose.vercel.app/",
       image: "/clinix-preview.png"
     },
     {
-      title: "DocuFlow | Premium Design System",
-      description: "A comprehensive design system and documentation framework. DocuFlow provides high-fidelity UI components optimized for technical workflows.",
-      tags: ["Frontend", "CSS", "UI/UX", "Architecture"],
+      title: "DocuFlow | Server-Rendered Platform",
+      description: "A lightweight, server-rendered documentation platform designed for teams that want clarity, speed, and control over technical knowledge. Features live preview, autosave, and version control.",
+      tags: ["Go", "SQLite", "HTMX", "Backend"],
       link: "https://github.com/christian759/docuflow"
     }
   ];
