@@ -1,14 +1,37 @@
-import { ReactNode } from 'react';
+import { type ReactNode, useEffect, useRef } from 'react';
 
 interface SectionProps {
     id?: string;
     children: ReactNode;
     className?: string;
+    noReveal?: boolean;
 }
 
-export default function Section({ id, children, className = "" }: SectionProps) {
+export default function Section({ id, children, className = "", noReveal = false }: SectionProps) {
+    const sectionRef = useRef<HTMLElement>(null);
+
+    useEffect(() => {
+        if (noReveal) return;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal-visible');
+                    }
+                });
+            },
+            { threshold: 0.15 }
+        );
+
+        const childrenToReveal = sectionRef.current?.querySelectorAll('.reveal');
+        childrenToReveal?.forEach((el) => observer.observe(el));
+
+        return () => observer.disconnect();
+    }, [noReveal]);
+
     return (
-        <section id={id} className={`section-padding ${className}`}>
+        <section id={id} ref={sectionRef} className={`section-padding ${className}`}>
             <div className="container">
                 {children}
             </div>

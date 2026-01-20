@@ -1,7 +1,9 @@
 # 👋 Hi, I'm Christian Eighemhenrio (christian759)
-### Full Stack Engineer @ Campulse | Specializing in AI, RAG & High-Performance Systems
+### Full Stack & Mobile Engineer @ Campulse | Certified AI & Data Science Expert
 
-I am a results-driven Full Stack Engineer with a passion for building intelligent, scalable systems. My expertise lies in the intersection of AI-driven automation, Retrieval-Augmented Generation (RAG), and high-fidelity frontend architectures. Currently, I lead core engineering efforts at **Campulse**, delivering premium digital experiences to thousands of users.
+I am a results-driven Engineer with a passion for building intelligent, scalable systems. Currently, I lead core engineering efforts at **Campulse**, where I specialize in **Full Stack and Mobile development**, delivering premium digital experiences to thousands of users across web and mobile platforms. 
+
+My expertise extends into the intersection of AI-driven automation, Retrieval-Augmented Generation (RAG), and high-fidelity frontend architectures. I combine professional full-stack engineering with a deep, certified background in Cloud AI and Graph Data Science.
 
 ---
 
