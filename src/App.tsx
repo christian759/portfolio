@@ -48,7 +48,7 @@ function App() {
       title: "Chronosphere | 3D Interactive World",
       description: "A visually stunning 3D globe visualization project that maps worldwide connections and data points in real-time. Built with Three.js and React, Chronosphere features high-performance 3D rendering and interactive markers.",
       tags: ["3D", "Three.js", "React", "Data Viz"],
-      link: "https://github.com/christian759/chronosphere",
+      link: "https://github.com/The-honoured1/chronosphere",
       demoLink: "https://chronosphere-alpha.vercel.app/",
       image: "/chronosphere.png"
     },
@@ -56,7 +56,7 @@ function App() {
       title: "QueryIQ | Advanced RAG Intelligence",
       description: "A state-of-the-art Retrieval-Augmented Generation (RAG) system with integrated Gemini AI. Features precise document analysis with full citation support and real-time intelligent responses.",
       tags: ["AI", "RAG", "Python", "Gemini API"],
-      link: "https://github.com/christian759/QueryIQ",
+      link: "https://github.com/The-honoured1/QueryIQ",
       demoLink: "https://query-iq.streamlit.app/",
       image: "/query-iq.png"
     },
@@ -64,7 +64,7 @@ function App() {
       title: "Statify | Analytics Dashboard",
       description: "An enterprise-grade financial analytics dashboard engineered for performance. Leveraging React and TypeScript with custom virtualization logic and D3-powered visualizations, Statify provides real-time insights with zero-lag interactions.",
       tags: ["Frontend", "TypeScript", "Performance", "React"],
-      link: "https://github.com/christian759/statify",
+      link: "https://github.com/The-honoured1/statify",
       demoLink: "https://statifydata.vercel.app/",
       images: ["/statify-1.png", "/statify-2.png"]
     },
@@ -72,7 +72,7 @@ function App() {
       title: "Object Detection | Real-time Vision",
       description: "A high-performance object detection system leveraging computer vision to identify and track objects in real-time with high precision.",
       tags: ["AI", "Python", "Computer Vision", "Streamlit"],
-      link: "https://github.com/christian759/object-detection",
+      link: "https://github.com/The-honoured1/object-detection",
       demoLink: "https://object-detection-p.streamlit.app/",
       image: "/object-detection.png"
     },
@@ -80,7 +80,7 @@ function App() {
       title: "Clinix | Modern Healthcare Platform",
       description: "A comprehensive healthcare management system built with TypeScript. Clinix streamlines patient management and clinic operations with a focus on UX.",
       tags: ["Frontend", "TypeScript", "Healthcare", "UX"],
-      link: "https://github.com/christian759/clinix",
+      link: "https://github.com/The-honoured1/clinix",
       demoLink: "https://clinix-rose.vercel.app/",
       image: "/clinix-preview.png"
     },
@@ -88,7 +88,7 @@ function App() {
       title: "DocuFlow | Server-Rendered Platform",
       description: "A lightweight, server-rendered documentation platform designed for teams that want clarity, speed, and control over technical knowledge. Features live preview, autosave, and version control.",
       tags: ["Go", "SQLite", "HTMX", "Backend"],
-      link: "https://github.com/christian759/docuflow"
+      link: "https://github.com/The-honoured1/docuflow"
     }
   ];
 
@@ -125,7 +125,7 @@ function App() {
               <button className="btn-premium" onClick={() => document.getElementById('experience')?.scrollIntoView()}>
                 Explore My Journey
               </button>
-              <a href="https://github.com/christian759" target="_blank" className="glass" style={{ padding: '18px 48px', borderRadius: '16px', fontWeight: 700, display: 'inline-flex', alignItems: 'center', textDecoration: 'none', color: 'white', textTransform: 'uppercase', fontSize: '0.9rem', letterSpacing: '0.05em' }}>
+              <a href="https://github.com/The-honoured1" target="_blank" className="glass" style={{ padding: '18px 48px', borderRadius: '16px', fontWeight: 700, display: 'inline-flex', alignItems: 'center', textDecoration: 'none', color: 'white', textTransform: 'uppercase', fontSize: '0.9rem', letterSpacing: '0.05em' }}>
                 View GitHub
               </a>
             </div>
@@ -239,12 +239,12 @@ function App() {
           {[
             {
               title: "SmartChain",
-              link: "https://github.com/christian759/smartchain",
+              link: "https://github.com/The-honoured1/smartchain",
               desc: "This sample code demonstrates the use of the LangChain Java framework with OCI Gen AI Service. The sample supports Large Language Model, HTTP Request Chain and SQL Chain for Oracle Database."
             },
             {
               title: "SmartLens",
-              link: "https://github.com/christian759/SmartLens",
+              link: "https://github.com/The-honoured1/SmartLens",
               desc: "AI Mobile app for text detection using Google ML KIT. Focuses on high-accuracy real-time text extraction and processing."
             }
           ].map((project, i) => (
@@ -438,7 +438,7 @@ function App() {
             <div className="reveal" style={{ transitionDelay: '0.2s' }}>
               <h4 style={{ fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '32px', opacity: 0.5 }}>Connect</h4>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                <li><a href="https://github.com/christian759" target="_blank" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '14px' }}>GitHub</a></li>
+                <li><a href="https://github.com/The-honoured1" target="_blank" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '14px' }}>GitHub</a></li>
                 <li><a href="#" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '14px' }}>LinkedIn</a></li>
                 <li><a href="#" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '14px' }}>Twitter</a></li>
               </ul>

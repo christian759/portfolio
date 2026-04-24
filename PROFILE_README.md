@@ -61,11 +61,11 @@ I hold several global certifications that validate my expertise in cutting-edge 
 
 | Project | Description | Tech Stack | Link |
 | :--- | :--- | :--- | :--- |
-| **Chronosphere** | 3D Interactive World Globe mapping worldwide connections in real-time. | `Three.js`, `React` | [View Project](https://github.com/christian759/chronosphere) |
-| **QueryIQ** | Advanced RAG Intelligence for precision document analysis and AI citations. | `Python`, `Gemini`, `RAG` | [View Project](https://github.com/christian759/QueryIQ) |
+| **Chronosphere** | 3D Interactive World Globe mapping worldwide connections in real-time. | `Three.js`, `React` | [View Project](https://github.com/The-honoured1/chronosphere) |
+| **QueryIQ** | Advanced RAG Intelligence for precision document analysis and AI citations. | `Python`, `Gemini`, `RAG` | [View Project](https://github.com/The-honoured1/QueryIQ) |
 | **Statify** | Enterprise-grade financial analytics dashboard with custom virtualization. | `TS`, `React`, `D3.js` | [Try Demo](https://statifydata.vercel.app/) |
-| **SmartLens** | Real-time object detection system for mobile and vision applications. | `Python`, `CV`, `Streamlit` | [View Project](https://github.com/christian759/object-detection) |
-| **DocuFlow** | Lightweight, high-performance documentation platform for technical teams. | `Go`, `SQLite`, `HTMX` | [View Project](https://github.com/christian759/docuflow) |
+| **SmartLens** | Real-time object detection system for mobile and vision applications. | `Python`, `CV`, `Streamlit` | [View Project](https://github.com/The-honoured1/object-detection) |
+| **DocuFlow** | Lightweight, high-performance documentation platform for technical teams. | `Go`, `SQLite`, `HTMX` | [View Project](https://github.com/The-honoured1/docuflow) |
 
 ---
 
@@ -77,8 +77,8 @@ I hold several global certifications that validate my expertise in cutting-edge 
 ### 📊 GitHub Ecosystem
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=christian759&show_icons=true&theme=radical&hide_border=true&count_private=true" width="48%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=christian759&layout=compact&theme=radical&hide_border=true" width="48%" />
+  <img src="https://github-readme-stats.vercel.app/api?username=The-honoured1&show_icons=true&theme=radical&hide_border=true&count_private=true" width="48%" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=The-honoured1&layout=compact&theme=radical&hide_border=true" width="48%" />
 </p>
 
 ---
@@ -86,7 +86,7 @@ I hold several global certifications that validate my expertise in cutting-edge 
 ### 📫 Connect with Me
 
 <p align="left">
-  <a href="https://github.com/christian759"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
+  <a href="https://github.com/The-honoured1"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
   <a href="https://www.linkedin.com/in/christian759"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
 </p>
 
