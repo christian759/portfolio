@@ -18,6 +18,12 @@ My expertise extends into the intersection of AI-driven automation, Retrieval-Au
 
 ### 💼 Professional Experience
 
+#### **Software Engineer | Evu (Project Glix)**
+*FEB 2026 — PRESENT*
+- Developing Glix, an AI-driven liquidity orchestrator and money bridge for global financial corridors.
+- Building interoperability layers mapping data and liquidity between closed payment ecosystems like PayPal, Payoneer, and Wise.
+- Delivering seamless cross-platform money transfer capabilities focusing on velocity and cost-efficiency.
+
 #### **Full Stack & Mobile Engineer | Campulse**
 *JUL 2025 — PRESENT*
 - Leading the end-to-end development of critical platform features and mobile applications.

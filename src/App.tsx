@@ -143,6 +143,24 @@ function App() {
         <div className="glass reveal" style={{ padding: '80px', transitionDelay: '0.1s', marginBottom: '40px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '24px', marginBottom: '40px' }}>
             <div>
+              <h3 style={{ fontSize: '32px', marginBottom: '8px' }}>Software Engineer</h3>
+              <p style={{ color: 'white', fontWeight: 700, fontSize: '1.2rem' }}>Evu (Project Glix)</p>
+            </div>
+            <span style={{ fontSize: '14px', fontWeight: 600, opacity: 0.6, letterSpacing: '0.05em' }}>FEB 2026 — PRESENT</span>
+          </div>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '1.3rem', marginBottom: '48px', maxWidth: '900px', lineHeight: '1.8' }}>
+            Developing Glix, an AI-driven liquidity orchestrator that connects global financial corridors. Building the next generation platform that bridges the gap between traditional banking and closed payment ecosystems like PayPal, Payoneer, and Wise.
+          </p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
+            {["AI Routing", "Fintech", "Microservices", "React", "TypeScript", "Node.js"].map(tag => (
+              <span key={tag} className="glass" style={{ fontSize: '12px', fontWeight: 700, padding: '10px 24px', borderRadius: '100px', background: 'rgba(255,255,255,0.03)' }}>{tag}</span>
+            ))}
+          </div>
+        </div>
+
+        <div className="glass reveal" style={{ padding: '80px', transitionDelay: '0.2s', background: 'rgba(255,255,255,0.02)', marginBottom: '40px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '24px', marginBottom: '40px' }}>
+            <div>
               <h3 style={{ fontSize: '32px', marginBottom: '8px' }}>Full Stack & Mobile Developer</h3>
               <p style={{ color: 'white', fontWeight: 700, fontSize: '1.2rem' }}>Campulse</p>
             </div>
@@ -158,7 +176,7 @@ function App() {
           </div>
         </div>
 
-        <div className="glass reveal" style={{ padding: '80px', transitionDelay: '0.2s', border: '1px solid rgba(255,255,255,0.03)', background: 'transparent' }}>
+        <div className="glass reveal" style={{ padding: '80px', transitionDelay: '0.3s', border: '1px solid rgba(255,255,255,0.03)', background: 'transparent' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '24px', marginBottom: '40px' }}>
             <div>
               <h3 style={{ fontSize: '32px', marginBottom: '8px' }}>B.Eng. Computer Engineering</h3>
